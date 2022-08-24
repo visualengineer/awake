@@ -1,0 +1,260 @@
+/* //////////////////////////////////// 4 -  B U T T O N S   ////////////////////////// */
+// Read:
+// @link https://moderncss.dev/css-button-styling-guide/
+//or perhaps better
+//https://css-tricks.com/a-complete-guide-to-links-and-buttons/
+//
+
+/*
+.button {
+  border: 0;
+  border-radius: 0.25rem;
+  background: #1E88E5;
+  color: white;
+  font-family: -system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem;
+  cursor: pointer;
+}
+
+button[aria-pressed="true"] { }
+button[aria-pressed="false"] { }
+
+*/
+
+a.button,
+button {
+  font-size: 1.3rem;
+  font-weight: 600;
+  //margin: $me;
+}
+
+// Reset default link styles
+a.button {
+  text-decoration: none;
+}
+
+// Reset default button styles
+button.button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
+
+  @media screen and (-ms-high-contrast: active) {
+    border: 2px solid currentcolor;
+  }
+}
+
+a.button,
+button.button {
+  // Display
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: start; // Optional - see "Gotchas"
+  // Visual
+  background-color: $btnColor;
+  color: $primary-navy;
+  border-radius: $radii;
+  border: 0px solid $btnColor;
+  //box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+  // Size
+  padding: $mi $me;
+  min-width: 10ch;
+  min-height: 3rem; //3.5rem
+  // Text
+  text-align: center;
+  line-height: 1.1;
+  // Motion
+  transition: 220ms all ease-in-out;
+
+  &:hover,
+  &:active {
+    //background-color: scale-color($btnColor, $lightness: -20%);
+    background-color: $primary-navy;
+    color: $primary-light;
+  }
+
+  &:focus {
+    outline-style: solid;
+    outline-color: transparent;
+    //box-shadow: 0 0 0 4px rgba(63, 128, 144, 0.34);
+  }
+
+  &--small {
+    font-size: 1rem; // was 1rem $mi $me
+    font-weight: normal;
+    min-height: 1.8rem;
+    min-width: 5ch;
+    padding: $na $mi; // was $mi $me
+    border-radius: $radii-small;
+    //outline: 1px solid red !important;
+  }
+  &--form {
+    font-size: 1.2rem; // was 1rem $mi $me
+    font-weight: 300;
+    min-height: 3rem;
+    min-width: 3ch;
+    padding: 0.15rem 1rem 0.3rem 1rem;
+    border-radius: $radii-small;
+    border: none;
+    color: $primary-light;
+    background-color: $green;
+    outline: none;
+    &:hover {
+      background-color: $primary-navy;
+      color: $primary-light;
+    }
+    &:active {
+      //background-color: scale-color($btnColor, $lightness: -20%);
+      background-color: $primary-light;
+      color: $primary-navy;
+      border: 1px $primary-navy solid;
+    }
+  }
+  &--form-hollow {
+    font-size: 1.2rem; // was 1rem $mi $me
+    font-weight: 300;
+    min-height: 3rem;
+    min-width: 3ch;
+    padding: 0.15rem 1rem 0.3rem 1rem;
+    border-radius: $radii-small;
+    border: 1px $field-border solid;
+    color: $primary-navy;
+    background-color: $primary-light;
+    outline: none;
+    &:hover {
+      background-color: $primary-navy;
+      color: $primary-light;
+      border: 1px $primary-navy solid;
+    }
+    &:active {
+      //background-color: scale-color($btnColor, $lightness: -20%);
+      background-color: $primary-light;
+      color: $primary-navy;
+      box-shadow: 0px 0px 14px 6px rgba(50, 42, 114, 0);
+    }
+  }
+
+  &--medium {
+    font-size: 2rem; // was 1rem $mi $me
+    font-weight: 300;
+    min-height: 1rem;
+    min-width: 3ch;
+    padding: 0.15rem 0 0.4rem 0;
+    border-radius: $radii-small;
+    background-color: $brandYellow;
+    &:hover {
+      //background-color: scale-color($btnColor, $lightness: -20%);
+      background-color: $brandYellow;
+      color: $primary-navy;
+      box-shadow: 0px 0px 14px 6px rgba(251, 174, 8, 0.9);
+    }
+    &:active {
+      //background-color: scale-color($btnColor, $lightness: -20%);
+      background-color: $primary-light;
+      color: $primary-navy;
+      box-shadow: 0px 0px 14px 6px rgba(50, 42, 114, 0);
+    }
+  }
+  &--medium-2 {
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 1.4rem; // was 1rem $mi $me
+    font-weight: 400;
+    min-height: 1rem;
+    height: 3rem;
+    min-width: 3ch;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: $radii-small;
+    background-color: $brandYellow;
+    &:hover {
+      //background-color: scale-color($btnColor, $lightness: -20%);
+      background-color: $brandYellow;
+      color: $primary-navy;
+      box-shadow: 0px 0px 14px 6px rgba(251, 174, 8, 0.9);
+    }
+    &:active {
+      //background-color: scale-color($btnColor, $lightness: -20%);
+      background-color: $primary-light;
+      color: $primary-navy;
+      box-shadow: 0px 0px 14px 6px rgba(50, 42, 114, 0);
+    }
+  }
+  &--block {
+    width: 100%;
+    padding: $mi 0;
+  }
+  &--white {
+    width: 100%;
+    padding: $mi 0 $sm 0;
+    background-color: $primary-light;
+    color: $primary-navy;
+    &:hover,
+    &:active {
+      //background-color: scale-color($btnColor, $lightness: -20%);
+      background-color: $btnColor;
+      color: $primary-navy;
+    }
+  }
+  &--outline {
+    width: 100%;
+    padding: $mi 0 $sm 0;
+    border: 2px solid $primary-light;
+    background-color: $primary-navy !important;
+    color: $primary-light;
+  }
+  &--alert {
+    font-size: 95%;
+    max-height: 3rem;
+    padding: 0.6rem $me $sm $me;
+    border: 2px solid $primary-light;
+    background-color: transparent !important;
+    color: $primary-light;
+    border-radius: $radii;
+  }
+  &--archive {
+    //position: static;
+    float: right;
+    font-size: 1rem;
+    width: 8rem;
+    border-radius: $radii;
+    padding: $sm $mi $sm $mexl;
+    border: 1px solid $field-border;
+    //background-color: none !important;
+    color: #aaa;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 11'%3E%3Cpath fill='%23AAA' d='M1 10.92l2.51-2.21h7.05A1.4 1.4 0 0012 7.34v-6A1.41 1.41 0 0010.56 0H1.44A1.41 1.41 0 000 1.38v9a.69.69 0 00.71.62.76.76 0 00.29-.08z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left 1rem center;
+    background-size: 1rem;
+    //height: 1rem;
+    //width: 2rem;
+    //margin-right: 1.5rem; // keep flag from dots
+    //justify-self: end; //margin-left: 0.82rem;
+    &:hover,
+    &:active {
+      //background-color: scale-color($btnColor, $lightness: -20%);
+      //background-color: $btnColor;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 11'%3E%3Cpath fill='%231e1567' d='M1 10.92l2.51-2.21h7.05A1.4 1.4 0 0012 7.34v-6A1.41 1.41 0 0010.56 0H1.44A1.41 1.41 0 000 1.38v9a.69.69 0 00.71.62.76.76 0 00.29-.08z'/%3E%3C/svg%3E");
+      border: 1px solid $primary-navy;
+      color: $primary-navy;
+      cursor: pointer;
+    }
+  }
+}
+
+.person a.button {
+  @include respond(1500) {
+    height: 3rem;
+    font-size: 1.2rem;
+  }
+}
+/* /////////////////////// E N D   B U T T O N S  /////////////////////// */

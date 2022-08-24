@@ -1,0 +1,211 @@
+$na: 0.3rem;
+$mi: 0.5rem;
+$sm: 0.75rem;
+$mes: 1rem;
+$mess: 1.1rem;
+$me: 1.25rem;
+$mel: 1.5rem;
+$mex: 1.75rem;
+$mexl: 2rem;
+$las: 2.5rem;
+$lam: 3rem;
+$la: 3.5rem;
+$xla: 4rem;
+//
+$radii: 0.25rem;
+$radii-small: 0.3rem;
+//
+//animation speed
+//$i: 2000ms;
+
+@mixin respond($breakpoint) {
+  // $breakpoint is simply a variable that can have several values
+  // min-width = mobile-first, max-width = desktop first
+  @if $breakpoint==320 {
+    @media only screen and (min-width: 320px) {
+      @content;
+    }
+  }
+  @if $breakpoint==400 {
+    //added Nov 17th 2020 for line break on homepage intro
+    @media only screen and (min-width: 400px) {
+      @content;
+    }
+  }
+  @if $breakpoint==500 {
+    @media only screen and (min-width: 500px) {
+      @content;
+    }
+  }
+  @if $breakpoint==768 {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint==1024 {
+    @media only screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+  @if $breakpoint==1200 {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint==1300 {
+    @media only screen and (min-width: 1300px) {
+      @content;
+    }
+  }
+  @if $breakpoint==1400 {
+    @media only screen and (min-width: 1400px) {
+      @content;
+    }
+  }
+  @if $breakpoint==1500 {
+    @media only screen and (min-width: 1500px) {
+      @content;
+    }
+  }
+  @if $breakpoint==1600 {
+    @media only screen and (min-width: 1600px) {
+      @content;
+    }
+  }
+  @if $breakpoint==1700 {
+    @media only screen and (min-width: 1700px) {
+      @content;
+    }
+  }
+  @if $breakpoint==1921 {
+    @media only screen and (min-width: 1920px) {
+      @content;
+    }
+  }
+  @if $breakpoint==2016 {
+    @media only screen and (min-width: 2016px) {
+      @content;
+    }
+  }
+  @if $breakpoint==2200 {
+    @media only screen and (min-width: 2200px) {
+      @content;
+    }
+  }
+  @if $breakpoint==2400 {
+    @media only screen and (min-width: 2400px) {
+      @content;
+    }
+  }
+  @if $breakpoint==2800 {
+    @media only screen and (min-width: 2800px) {
+      @content;
+    }
+  }
+  @if $breakpoint==3200 {
+    @media only screen and (min-width: 3200px) {
+      @content;
+    }
+  }
+}
+
+@mixin outLine {
+  outline: 1px dotted #ffcc00;
+}
+
+@mixin slideUp {
+  transition: all 0.2s ease-in;
+  //-webkit-transition: all 0.2s ease-in;
+  //-moz-transition: all 0.2s ease-in;
+  transform: translateX(0, 100%);
+  //transform: translate(0, 90%);
+}
+@mixin slideDown {
+  transition: all 0.2s ease-in;
+  //-webkit-transition: all 0.2s ease-in;
+  //-moz-transition: all 0.2s ease-in;
+  transform: translateX(100%, 0);
+  //transform: translate(0, 90%);
+}
+@mixin slideRight {
+  //-webkit-transition-delay: 10s;
+  transition: all 0.4s ease-in;
+  transform: translateX(0%, -100%);
+  //-webkit-transform: translateX(0%, -100%);
+}
+@mixin slideLeft {
+  transition: all 0.3s ease-out;
+  transform: translateX(-100%, 0%);
+  //-webkit-transform: translateX(100%, 0%);
+}
+
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  //transform: translateX(100%);
+}
+
+@mixin easeOutVis {
+  transition: opacity 1s ease-out;
+  //-webkit-transition: opacity 1s ease-out;
+  //transform: translateX(100%);
+}
+@mixin easeInVis {
+  transition: opacity 0.5s ease-in;
+  //-webkit-transition: opacity 0.5s ease-in;
+  //transform: translateX(100%);
+}
+
+/*
+animation: fadeOut ease 1s;
+-webkit-animation: fadeOut ease 1s;
+-moz-animation: fadeOut ease 1s;
+-o-animation: fadeOut ease 1s;
+-ms-animation: fadeOut ease 1s;
+
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+*/

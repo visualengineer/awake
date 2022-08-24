@@ -1,0 +1,142 @@
+//$font: 'Inter UI', Helvetica Neue, Arial, sans-serif;
+$font: system-ui, -apple-system, BlinkMacSystemFont, 'Inter UI', 'SegoeUI', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+// Master font size and line height set in reset ////////////////////////////////////////////////////////////
+::selection {
+  color: $primary-navy;
+  background: $btnColor;
+}
+
+body {
+  font-family: $font;
+  color: $primary-navy;
+}
+//all paragraphs but not overlay or breakdown percentages
+p :not(.slow) :not(span[class$='PerCol']),
+table:not(footer p) {
+  font-size: $me;
+  //line-height: 1.4;
+  //outline: 1px dotted #000;
+  @include respond(1300) {
+    font-size: $mexl;
+  }
+}
+h1 {
+  font-size: $mel;
+  @include respond(500) {
+    font-size: $mexl;
+  }
+  @include respond(1300) {
+    font-size: $las;
+    line-height: 1.2;
+  }
+  @include respond(2016) {
+    font-size: $lam;
+  }
+}
+h2 {
+  font-size: $mel;
+  font-weight: normal;
+  @include respond(500) {
+    font-size: $mexl;
+  }
+  @include respond(1300) {
+    font-size: $las;
+    line-height: 1.2;
+  }
+  @include respond(2016) {
+    font-size: $lam;
+  }
+}
+h3.url {
+  font-size: $sm;
+  font-weight: normal;
+  color: $purp;
+  @include respond(500) {
+    font-size: $me;
+  }
+  @include respond(1300) {
+    font-size: $mes;
+    line-height: 1.2;
+  }
+  @include respond(2016) {
+    font-size: $mes;
+  }
+}
+
+nav.secondary {
+  color: $secondary-light;
+}
+nav.primary {
+  color: $primary-light;
+  font-size: $mel;
+  font-weight: 600;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+a {
+  color: $primary-navy;
+  outline: 0;
+}
+a:hover {
+  color: $primary-navy;
+  outline: 0;
+}
+a:focus {
+  outline: 0;
+}
+a:active {
+  outline: 0;
+}
+
+a.gl {
+  color: $btnColor;
+}
+a.gl:hover,
+a.gl:focus,
+a.gl:active {
+  color: $primary-light;
+}
+
+.nobreak {
+  white-space: nowrap;
+}
+////// BREAKDOWNS
+
+.breakHolder p {
+  @include respond(1300) {
+    font-size: $me;
+  }
+}
+
+.impressions {
+  font-size: 1.2rem;
+}
+
+footer p {
+  //font-size: $me;
+  //line-height: 1.4;
+  //outline: 1px dotted #000;
+  @include respond(1300) {
+    font-size: $me;
+  }
+}
+
+footer h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.key span p {
+  font-size: 0.8rem;
+  @include respond(1921) {
+    font-size: 1rem;
+  }
+}
+.white {
+  color: $primary-light;
+}
+.pink {
+  color: magenta;
+}

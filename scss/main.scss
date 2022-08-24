@@ -1,0 +1,43 @@
+@import '_mixins';
+@import '_colors';
+@import '_typography';
+@import '_buttons';
+@import '_forms';
+
+// - - I N D E X
+//
+// 1 - M A I N   E L E M E N T S - L O C A L
+//
+// 2 - T A B L E S - I M P O R T
+// 3 - F O R M S - I M P O R T
+// 4 - B U T T O N S - I M P O R T
+
+//Margins mobile
+
+//Margins tablet
+
+//margins desktop
+
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//////////  M A I N   E L E M E N T S   /////////////////
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+/*
+//added html because of mega margin
+html {
+  background: #fff;
+}
+*/
+body {
+  //overscroll-behavior-y: none;
+  overscroll-behavior: none;
+  //height: 100vh;
+  //add mega margin!
+  //max-width: 150rem;
+  @include respond(2400) {
+    background: $navGrayThree;
+  }
+}

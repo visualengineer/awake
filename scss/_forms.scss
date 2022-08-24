@@ -1,0 +1,622 @@
+form {
+  //learn
+  margin-bottom: $la;
+}
+
+form ul {
+}
+form ul li {
+  margin: $sm 0;
+}
+
+input[type='text']:hover,
+input[type='email']:hover,
+input[type='password']:hover,
+input[type='search']:hover,
+textarea:hover,
+.box select:hover {
+  color: $primary-navy;
+  outline: none;
+  background-color: $field-bg;
+  border: 1px solid $field-border-active;
+}
+
+input[type='submit']:hover,
+input[type='button']:hover {
+  color: $field-bg;
+  outline: none;
+  background-color: $primary-navy;
+  border: 1px solid $field-border-active;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+input[type='search']:focus,
+input[type='submit']:focus,
+input[type='button']:focus,
+textarea:focus,
+.box select:focus {
+  color: $primary-navy;
+  outline: none;
+  background-color: $field-bg-active;
+  border: 1px solid $field-border-active;
+}
+
+input:active {
+  background-color: #fff;
+}
+
+legend {
+  //learn
+}
+
+label.text-field {
+  //@include outLine;
+  display: block;
+  color: $primary-navy;
+  font-size: 0.9rem;
+  margin-bottom: $mi;
+  text-align: left;
+  @include respond(1300) {
+    font-size: 1rem;
+  }
+  &.something {
+    font-size: 1rem;
+  }
+}
+//this dark style is only used on footer
+input.dark {
+  background: $primary-navy !important;
+  color: $primary-light !important;
+
+  border: 1px solid #50199f !important;
+  @include respond(768) {
+    background: $secondary-navy !important;
+  }
+}
+
+label.hide {
+  margin-bottom: 0;
+}
+
+fieldset {
+  //learn
+}
+::placeholder {
+  //color: lighten($primary-navy:;
+  color: $placeholder;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+select,
+textarea {
+  //Remove defaults
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  //
+  //-moz-box-shadow: inset 1px 1px 2px #ddd;
+  //-webkit-box-shadow: inset 1px 1px 2px #ddd;
+  //box-shadow: inset 1px 1px 2px #ddd;
+  width: 100%;
+  padding: 0 0.8rem 0.2rem 0.8rem;
+  border: 1px solid $field-border;
+  resize: vertical;
+  font-size: 1.2rem;
+  //outline-width: 0;
+  //outline: none;
+  color: $primary-navy;
+  background-color: $field-bg;
+  border-radius: $radii;
+}
+
+textarea {
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  //font-family: 'IBM Plex Sans', Helvetica Neue, Arial, sans-serif;
+}
+
+/*
+
+      background-color: $field-bg;
+      border: 2px solid $field-bg;
+
+      */
+
+/* Style inputs, select elements and textareas */
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+select {
+  height: 3rem;
+}
+textarea {
+  height: 6rem;
+}
+
+input[type='submit'],
+input[type='button'] {
+  //text-indent: -9999px;
+  height: 3rem;
+  font-weight: 700;
+  //width: 47.8ch;
+  width: 100%;
+  background-color: $btnColor;
+  color: $primary-navy;
+  border: 1px solid $btnColor;
+  border-radius: $radii;
+  //-webkit-border-radius: 0;
+  //-moz-border-radius: 0;
+  -webkit-appearance: none;
+  //border-radius: 0;
+  cursor: pointer;
+  //background-image: url('../img/search.svg');
+  //background-position: center center;
+  //background-size: 45% 45%;
+  //background-repeat: no-repeat;
+  //outline-width: 0;
+  //outline: none;
+  //margin-top: 2rem; ////////////////////////////////////////// TOOK this out might need to put it back
+}
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type='checkbox'],
+  input[type='radio'] {
+    --active: #1cee1b;
+    --active-inner: #1b1464;
+    --focus: 2px rgba(39, 94, 254, 0.3);
+    --border: #ddd;
+    --border-hover: #4c00bb;
+    --background: #f5f5f5;
+    --disabled: #ddd;
+    --disabled-inner: #3a1686;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 30px; //21px
+    outline: none;
+    display: inline-block;
+    -webkit-user-select: none; // added to remove colour on focus 1/12/2020
+    -khtml-user-select: none; // added to remove colour on focus 1/12/2020
+    -moz-user-select: -moz-none; // added to remove colour on focus 1/12/2020
+    -o-user-select: none; // added to remove colour on focus 1/12/2020
+    user-select: none; // added to remove colour on focus 1/12/2020
+    vertical-align: top;
+    position: absolute; //changed from relative
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    &:after {
+      content: '';
+      display: block;
+      left: 0;
+      top: 0;
+      position: absolute;
+      transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+    }
+    &:checked {
+      --b: var(--active); //background of all when checked
+      --bc: var(--active); //border of all
+      --d-o: 0.3s;
+      --d-t: 0.6s;
+      --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    }
+    &:disabled {
+      --b: var(--disabled-inner);
+      --bc: var(--disabled); //border of all
+      cursor: not-allowed;
+      opacity: 1;
+      &:checked {
+        --b: var(--disabled-inner);
+        --bc: var(--disabled);
+      }
+      & + label {
+        cursor: not-allowed;
+      }
+    }
+    &:hover {
+      &:not(:checked) {
+        &:not(:disabled) {
+          --bc: var(--border-hover);
+        }
+      }
+    }
+    &:focus {
+      //box-shadow: 0 0 0 var(--focus);
+    }
+    &:not(.switch) {
+      width: 30px; //21px
+      &:after {
+        opacity: var(--o, 0);
+      }
+      &:checked {
+        --o: 1;
+      }
+    }
+    & + label {
+      font-size: 1.3rem;
+      line-height: 1.9rem;
+      position: relative; //changing this from relative to absolute inlined the labels
+      display: inline-block; //was inline-block
+      vertical-align: top;
+      cursor: pointer;
+      margin-left: 40px; //was 10px
+      //@include outLine;
+      //outline: 1px dotted red;
+    }
+  }
+  input[type='checkbox'] {
+    &:not(.switch) {
+      border-radius: $radii; //7px
+      &:after {
+        width: 8px; //5px
+        height: 16px; //9px
+        border: 3px solid var(--active-inner); //was 2px - TICK
+        border-top: 0;
+        border-left: 0;
+        left: 10px;
+        top: 4px;
+        transform: rotate(var(--r, 20deg));
+        //outline: 1px dotted yellow;
+      }
+      &:checked {
+        --r: 43deg;
+      }
+    }
+    &.switch {
+      //outline: 1px dotted green;
+      width: 51px; //38px
+      border-radius: 22px; //11px
+
+      &:after {
+        left: 0; //2px
+        top: 0; //2px
+        border-radius: 50%;
+        width: 26px; //15px
+        height: 26px; //15px
+        background: var(--ab, var(--active));
+        transform: translateX(var(--x, 0));
+      }
+      &:checked {
+        --ab: var(--active-inner);
+        --x: 21px; //17
+      }
+      &:disabled {
+        &:not(:checked),
+        &:checked {
+          &:after {
+            opacity: 0.6;
+            background: var(--ab, var(--disabled));
+          }
+        }
+      }
+    }
+  }
+  input[type='radio'] {
+    //outline: 1px dotted pink;
+    border-radius: 50%;
+    &:after {
+      width: 27px; //was 19px
+      height: 27px; //was 19px
+      border-radius: 50%;
+      background: var(--active-inner);
+      opacity: 0;
+      transform: scale(var(--s, 0.7));
+    }
+    &:checked {
+      --s: 0.5;
+    }
+  }
+}
+.switch.stacked + label {
+  margin-left: 4rem;
+}
+
+/*
+      textarea {
+          -webkit-writing-mode: horizontal-tb !important;
+          text-rendering: auto;
+          color: -internal-light-dark-color(black, white);
+          letter-spacing: normal;
+          word-spacing: normal;
+          text-transform: none;
+          text-indent: 0px;
+          text-shadow: none;
+          display: inline-block;
+          text-align: start;
+          -webkit-appearance: textarea;
+          background-color: -internal-light-dark-color(white, black);
+          -webkit-rtl-ordering: logical;
+          flex-direction: column;
+          resize: auto;
+          cursor: text;
+          white-space: pre-wrap;
+          overflow-wrap: break-word;
+          margin: 0em;
+          font: 400 11px system-ui;
+          border-width: 1px;
+          border-style: solid;
+          border-color: initial;
+          border-image: initial;
+          padding: 2px;
+      }
+      */
+
+.switch-active {
+  font-size: 1.2rem;
+  margin: 0 $sm 0 0;
+  position: relative;
+  display: inline-block;
+}
+.switch-deactive {
+  font-size: 1.2rem;
+  color: $disabled;
+  margin-left: $la;
+}
+
+///////////////////////////////////////////////////////////
+/* //////////////// S E L E C T  B O X  //////////////// */
+///////////////////////////////////////////////////////////
+
+.box {
+  position: relative;
+}
+
+.box label {
+  //margin-top: 4rem;
+}
+
+.box select {
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.408 7.704'%3E%3Cpath d='M11.994 1.414l-5.29 5.29-5.29-5.29' fill='none' stroke='%231e1567' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E") no-repeat, $field-bg;
+  background-position: center right 1.2rem;
+  background-size: 0.9rem;
+  -webkit-appearance: none; // this must be here, not a duplicate
+
+  &:focus {
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+    -webkit-appearance: none; // this must be here, not a duplicate
+    background-position: center right 1.2rem;
+  }
+}
+
+.box:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.box select option {
+  padding: 30px;
+}
+
+//makes all text and inputs match width
+input,
+textarea,
+select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.error {
+  border: 2px solid $error !important;
+}
+.error-text {
+  padding-top: 0.5rem; //added Fri 23rd April 2021
+  color: $error !important;
+}
+
+.thanks {
+  margin: 2rem;
+}
+
+//extra space after form filed and button
+input[type='submit'] {
+  margin-top: 2rem;
+}
+
+///////////////////////////////////////////////////////////
+/* // auto populate styling - remove random colours  /// */
+///////////////////////////////////////////////////////////
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid $field-border;
+  -webkit-text-fill-color: $primary-navy;
+  -webkit-box-shadow: 0 0 0px 1000px $field-bg inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+  //border-radius: $radii;
+}
+
+// can't remove chrome autofill pale blue on ios 26/04/21
+/*
+input:-webkit-autofill {
+  color: #2a2a2a !important;
+}
+input:-internal-autofill-selected {
+  background-color: transparent;
+}
+
+
+-webkit-text-fill-color: yellow !important;
+
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  }
+
+  input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 60px #fafafa inset !important;
+    background-color: #fafafa !important;
+    background-clip: content-box !important;
+}
+
+@-webkit-keyframes autofill {
+  0%,
+  100% {
+    color: #666;
+    background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-delay: 1s; // Safari support - any positive time runs instantly
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+// https://stackoverflow.com/questions/2781549/removing-input-background-colour-for-chrome-autocomplete
+
+
+*/
+
+/////////////////////////////////////////////
+/* //// inputs disabled, within panels /// */
+/////////////////////////////////////////////
+.panel input[type='text']:disabled,
+.panel input[type='email']:disabled,
+.panel input[type='password']:disabled,
+.panel input[type='search']:disabled,
+.panel input[type='checkbox']:disabled,
+.panel input[type='radio']:disabled,
+.panel input[type='select']:disabled,
+.panel textarea:disabled {
+  background: $navGrayThree;
+  border: 1px solid $disabledTwo;
+  cursor: no-drop;
+}
+
+.panel input[type='button']:disabled,
+.panel input[type='submit']:disabled //change placeholder text to something like 'Please wait/Disabled'
+{
+  background: $disabledTwo;
+  border: 1px solid $disabledTwo;
+  color: $disabled;
+  cursor: no-drop;
+}
+.panel input[type='button']:disabled {
+  text-decoration: line-through;
+}
+
+.panel input[type='text']:disabled::placeholder,
+.panel input[type='email']:disabled::placeholder,
+.panel input[type='password']:disabled::placeholder,
+.panel input[type='search']:disabled::placeholder,
+.panel textarea:disabled::placeholder {
+  color: $disabledTwo;
+  text-decoration: line-through;
+  cursor: no-drop;
+}
+
+.panel input[type='text']:disabled:hover,
+.panel input[type='email']:disabled:hover,
+.panel input[type='password']:disabled:hover,
+.panel input[type='search']:disabled:hover {
+  border: 1px solid $disabledTwo;
+  cursor: no-drop;
+}
+.panel input[type='button']:disabled:hover,
+.panel input[type='submit']:disabled:hover {
+  border: 1px solid $navGrayTwo;
+  background: $disabledTwo;
+  border: 1px solid $disabledTwo;
+  color: $disabled;
+  cursor: no-drop;
+}
+.panel input[type='button']:disabled:hover {
+  text-decoration: line-through;
+}
+
+/////////////////////////////////////////////
+/* //// status message panel /// */
+/////////////////////////////////////////////
+.warning {
+  font-size: 0.9rem;
+  color: #856404;
+  background-color: #fff3cd;
+  padding: 0.9rem 1rem 1.1rem;
+  border-radius: $radii;
+  margin-top: 1.5rem;
+  border: 1px solid #ebddb1;
+}
+
+.warning a {
+  color: #5e4a0e;
+  border-bottom: 1px dotted #b1880c;
+}
+
+.warning a:hover {
+  color: #1f1800;
+  border-bottom: 1px dotted #b1880c;
+}
+
+.fatal {
+  font-size: 0.9rem;
+  color: #7a1c1c;
+  background-color: #fddede;
+  padding: 0.9rem 1rem 1.1rem;
+  border-radius: $radii;
+  margin-top: 1.5rem;
+  border: 1px solid #e6a0a0;
+}
+
+.fatal a {
+  color: #700000;
+  border-bottom: 1px dotted #ad6868;
+}
+
+.fatal a:hover {
+  color: #440d0d;
+  border-bottom: 1px dotted #b1880c;
+}
+
+.affirm {
+  font-size: 0.9rem;
+  color: #4d6e18;
+  background-color: #f2fdde;
+  padding: 0.9rem 1rem 1.1rem;
+  border-radius: $radii;
+  margin-top: 1.5rem;
+  border: 1px solid #c5e6a0;
+}
+
+.affirm a {
+  color: #2d4408;
+  border-bottom: 1px dotted #89ad68;
+}
+
+.affirm a:hover {
+  color: #083108;
+  border-bottom: 1px dotted #378106;
+}
