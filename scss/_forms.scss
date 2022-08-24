@@ -15,7 +15,7 @@ input[type='password']:hover,
 input[type='search']:hover,
 textarea:hover,
 .box select:hover {
-  color: $primary-navy;
+  color: $dark;
   outline: none;
   background-color: $field-bg;
   border: 1px solid $field-border-active;
@@ -25,7 +25,7 @@ input[type='submit']:hover,
 input[type='button']:hover {
   color: $field-bg;
   outline: none;
-  background-color: $primary-navy;
+  background-color: $dark;
   border: 1px solid $field-border-active;
 }
 
@@ -37,7 +37,7 @@ input[type='submit']:focus,
 input[type='button']:focus,
 textarea:focus,
 .box select:focus {
-  color: $primary-navy;
+  color: $dark;
   outline: none;
   background-color: $field-bg-active;
   border: 1px solid $field-border-active;
@@ -54,7 +54,7 @@ legend {
 label.text-field {
   //@include outLine;
   display: block;
-  color: $primary-navy;
+  color: $dark;
   font-size: 0.9rem;
   margin-bottom: $mi;
   text-align: left;
@@ -67,7 +67,7 @@ label.text-field {
 }
 //this dark style is only used on footer
 input.dark {
-  background: $primary-navy !important;
+  background: $dark !important;
   color: $primary-light !important;
 
   border: 1px solid #50199f !important;
@@ -84,7 +84,7 @@ fieldset {
   //learn
 }
 ::placeholder {
-  //color: lighten($primary-navy:;
+  //color: lighten($dark:;
   color: $placeholder;
 }
 
@@ -109,7 +109,7 @@ textarea {
   font-size: 1.2rem;
   //outline-width: 0;
   //outline: none;
-  color: $primary-navy;
+  color: $dark;
   background-color: $field-bg;
   border-radius: $radii;
 }
@@ -146,7 +146,7 @@ input[type='button'] {
   //width: 47.8ch;
   width: 100%;
   background-color: $btnColor;
-  color: $primary-navy;
+  color: $dark;
   border: 1px solid $btnColor;
   border-radius: $radii;
   //-webkit-border-radius: 0;
@@ -437,7 +437,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border: 1px solid $field-border;
-  -webkit-text-fill-color: $primary-navy;
+  -webkit-text-fill-color: $dark;
   -webkit-box-shadow: 0 0 0px 1000px $field-bg inset !important;
   transition: background-color 5000s ease-in-out 0s;
   //border-radius: $radii;

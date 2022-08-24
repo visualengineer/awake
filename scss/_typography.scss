@@ -2,13 +2,13 @@
 $font: system-ui, -apple-system, BlinkMacSystemFont, 'Inter UI', 'SegoeUI', 'HelveticaNeue', Helvetica, Arial, sans-serif;
 // Master font size and line height set in reset ////////////////////////////////////////////////////////////
 ::selection {
-  color: $primary-navy;
+  color: $dark;
   background: $btnColor;
 }
 
 body {
   font-family: $font;
-  color: $primary-navy;
+  color: $dark;
 }
 //all paragraphs but not overlay or breakdown percentages
 p :not(.slow) :not(span[class$='PerCol']),
@@ -77,11 +77,11 @@ nav.primary {
 }
 
 a {
-  color: $primary-navy;
+  color: $dark;
   outline: 0;
 }
 a:hover {
-  color: $primary-navy;
+  color: $dark;
   outline: 0;
 }
 a:focus {
@@ -139,4 +139,18 @@ footer h3 {
 }
 .pink {
   color: magenta;
+}
+
+
+
+
+///// AWAKE STYLES ADDE ////
+.grad {
+  font-size: 3rem;
+  font-weight: 600;
+  background: -webkit-linear-gradient(270deg, rgba(254,212,168,1) 0%, rgba(215,111,120,1) 100%);
+  //background: linear-gradient(270deg, rgba(254,212,168,1) 0%, rgba(215,111,120,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width:50vw;
 }

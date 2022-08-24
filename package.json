@@ -4,7 +4,7 @@
   "description": "toms awake site",
   "main": "index.js",
   "scripts": {
-    "start": "node-sass -w scss/ -o dist/css/ --recursive",
+    "start": "node-sass -w scss/ -o dist/css/ --recursive"
   },
   "author": "jg",
   "license": "ISC",

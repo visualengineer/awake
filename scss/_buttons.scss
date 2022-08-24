@@ -60,7 +60,7 @@ button.button {
   align-self: start; // Optional - see "Gotchas"
   // Visual
   background-color: $btnColor;
-  color: $primary-navy;
+  color: $dark;
   border-radius: $radii;
   border: 0px solid $btnColor;
   //box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
@@ -77,7 +77,7 @@ button.button {
   &:hover,
   &:active {
     //background-color: scale-color($btnColor, $lightness: -20%);
-    background-color: $primary-navy;
+    background-color: $dark;
     color: $primary-light;
   }
 
@@ -108,14 +108,14 @@ button.button {
     background-color: $green;
     outline: none;
     &:hover {
-      background-color: $primary-navy;
+      background-color: $dark;
       color: $primary-light;
     }
     &:active {
       //background-color: scale-color($btnColor, $lightness: -20%);
       background-color: $primary-light;
-      color: $primary-navy;
-      border: 1px $primary-navy solid;
+      color: $dark;
+      border: 1px $dark solid;
     }
   }
   &--form-hollow {
@@ -126,18 +126,18 @@ button.button {
     padding: 0.15rem 1rem 0.3rem 1rem;
     border-radius: $radii-small;
     border: 1px $field-border solid;
-    color: $primary-navy;
+    color: $dark;
     background-color: $primary-light;
     outline: none;
     &:hover {
-      background-color: $primary-navy;
+      background-color: $dark;
       color: $primary-light;
-      border: 1px $primary-navy solid;
+      border: 1px $dark solid;
     }
     &:active {
       //background-color: scale-color($btnColor, $lightness: -20%);
       background-color: $primary-light;
-      color: $primary-navy;
+      color: $dark;
       box-shadow: 0px 0px 14px 6px rgba(50, 42, 114, 0);
     }
   }
@@ -153,13 +153,13 @@ button.button {
     &:hover {
       //background-color: scale-color($btnColor, $lightness: -20%);
       background-color: $brandYellow;
-      color: $primary-navy;
+      color: $dark;
       box-shadow: 0px 0px 14px 6px rgba(251, 174, 8, 0.9);
     }
     &:active {
       //background-color: scale-color($btnColor, $lightness: -20%);
       background-color: $primary-light;
-      color: $primary-navy;
+      color: $dark;
       box-shadow: 0px 0px 14px 6px rgba(50, 42, 114, 0);
     }
   }
@@ -178,13 +178,13 @@ button.button {
     &:hover {
       //background-color: scale-color($btnColor, $lightness: -20%);
       background-color: $brandYellow;
-      color: $primary-navy;
+      color: $dark;
       box-shadow: 0px 0px 14px 6px rgba(251, 174, 8, 0.9);
     }
     &:active {
       //background-color: scale-color($btnColor, $lightness: -20%);
       background-color: $primary-light;
-      color: $primary-navy;
+      color: $dark;
       box-shadow: 0px 0px 14px 6px rgba(50, 42, 114, 0);
     }
   }
@@ -196,19 +196,19 @@ button.button {
     width: 100%;
     padding: $mi 0 $sm 0;
     background-color: $primary-light;
-    color: $primary-navy;
+    color: $dark;
     &:hover,
     &:active {
       //background-color: scale-color($btnColor, $lightness: -20%);
       background-color: $btnColor;
-      color: $primary-navy;
+      color: $dark;
     }
   }
   &--outline {
     width: 100%;
     padding: $mi 0 $sm 0;
     border: 2px solid $primary-light;
-    background-color: $primary-navy !important;
+    background-color: $dark !important;
     color: $primary-light;
   }
   &--alert {
@@ -244,8 +244,8 @@ button.button {
       //background-color: scale-color($btnColor, $lightness: -20%);
       //background-color: $btnColor;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 11'%3E%3Cpath fill='%231e1567' d='M1 10.92l2.51-2.21h7.05A1.4 1.4 0 0012 7.34v-6A1.41 1.41 0 0010.56 0H1.44A1.41 1.41 0 000 1.38v9a.69.69 0 00.71.62.76.76 0 00.29-.08z'/%3E%3C/svg%3E");
-      border: 1px solid $primary-navy;
-      color: $primary-navy;
+      border: 1px solid $dark;
+      color: $dark;
       cursor: pointer;
     }
   }
