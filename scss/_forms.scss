@@ -7,7 +7,12 @@ form ul {
 }
 form ul li {
   margin: $sm 0;
+  list-style: none;
 }
+
+
+
+
 
 input[type='text']:hover,
 input[type='email']:hover,

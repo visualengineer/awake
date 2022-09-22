@@ -42,6 +42,207 @@ body {
   //max-width: 150rem;
 }
 
-a {
-  color: $primary-light;
+.wrapper {
+  padding: $m;
+  max-width:1700px;
+  @include respond(768) {
+    padding: $t;
+  }
+  @include respond(1300) {
+    padding: $dt;
+  }
+  @include respond(1700) {
+    margin: 0 auto;
+  }
 }
+
+
+//////////////////////////////////////////////////////////////////////////////
+////////////// N A V /////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+@import '_nav';
+
+//////////////////////////////////////////////////////////////////////////////
+////////////// H E R O ///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+section.hero {
+  background: url('img/journey-tag.svg') top left;
+  padding: $m;
+  margin: 0 -$m;
+  @include respond(768) {
+    padding: $t;
+    margin: 0 -$t;
+  }
+  @include respond(1300) {
+    padding: $dt;
+    margin: 0 -$dt;
+  }
+
+}
+//////////////////////////////////////////////////////////////////////////////
+////////////// A W A K E  I N T R O //////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+section.awake-intro {
+  color: $dark;
+  background: $primary-light;
+  background-image: url("img/journey-tag.svg") top left;
+  padding: 4rem $m;
+  margin: 0 -$m;
+  text-align: center;
+  @include respond(768) {
+    padding: $t;
+    margin: 0 -$t;
+  }
+  @include respond(1300) {
+    padding: $dt;
+    margin: 0 -$dt;
+  }
+}
+
+.bio-logo {
+  margin: auto;
+  width: 125px;
+  height: 75px;
+  @include respond(1300) {
+    width: 150px;
+    height: 75px;
+  }
+}
+
+
+h2 {
+  margin: auto;
+  font-size: clamp(1.4rem, 2vw, 2.4rem);
+  margin-bottom: 4rem;
+  font-weight: 700;
+  max-width: 60rem;
+}
+
+figure {
+  display: inline-block;
+  margin-bottom: 2rem;
+  width: 100%;
+  @include respond(768) {
+    float: left;
+    width: 50%;
+  }
+  @include respond(1700) {
+    //width:850px;
+  }
+}
+
+.fig1 {
+  @include respond(768) {
+    width: 50vw;
+    border: 1px dotted red;
+    margin-left: -$t;
+  }
+  @include respond(1300) {
+    margin-left: -$dt;
+  }
+  @include respond(1700) {
+    width:850px;
+  }
+}
+.fig2 {
+  @include respond(768) {
+    width: 50vw;
+    border: 1px dotted yellow;
+    margin-right: -$t;
+  }
+  @include respond(1300) {
+    margin-right: -$dt;
+  }
+  @include respond(1700) {
+    width:850px;
+  }
+}
+
+.awake-intro figure img {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+
+  @include respond(768) {
+    left: unset;
+    margin-left: unset;
+    margin-right: unset;
+    max-width:unset;
+    position: unset;
+    right: unset;
+    width: 50vw;
+    float: left;
+  }
+  @include respond(1700) {
+    width:850px;
+  }
+ }
+
+ figcaption {
+    @include respond(768) {
+    left: unset;
+    margin-left: unset;
+    margin-right: unset;
+    max-width:unset;
+    position: unset;
+    right: unset;
+    width: 50vw;
+    float: left;
+  }
+ }
+
+
+//////////////////////////////////////////////////////////////////////////////
+////////////// J O U R N E Y /////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+section.journey {
+  background-image: url("img/journey-tag.svg") top left;
+}
+
+
+
+
+
+
+
+
+
+////////////// E L E M E N T S
+/// 
+/// 
+
+
+div[class^='gradient'], div[class*=' gradient']{
+  color: #F00;
+  display: inline-block;
+  margin: 4rem;
+  padding: 4rem;
+}
+
+.gradient-flame {
+  background: $grad-flame;
+}
+.gradient-chocolate {
+  background: $grad-choc;
+}
+
+.light {
+  margin: -$dt;
+  padding: $dt;
+  color: $dark;
+  background-color: $primary-light;
+}
+
+.dark {
+  margin: -$dt;
+  padding: $dt;
+  color: $primary-light;
+  background-color: $dark;
+}
+
+
+

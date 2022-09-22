@@ -67,6 +67,9 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter UI", "SegoeUI", "HelveticaNeue", Helvetica, Arial, sans-serif;
   color: #323436; }
 
+a {
+  color: #fff; }
+
 p :not(.slow) :not(span[class$='PerCol']),
 table:not(footer p) {
   font-size: 1.25rem; }
@@ -117,12 +120,8 @@ h3.url {
     h3.url {
       font-size: 1rem; } }
 
-nav.secondary {
-  color: #c8bae5; }
-
 nav.primary {
-  color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600; }
 
 .strong {
@@ -192,7 +191,8 @@ form {
   margin-bottom: 3.5rem; }
 
 form ul li {
-  margin: 0.75rem 0; }
+  margin: 0.75rem 0;
+  list-style: none; }
 
 input[type='text']:hover,
 input[type='email']:hover,
@@ -731,15 +731,8 @@ button.button {
   align-items: center;
   justify-content: center;
   align-self: start;
-  background-color: #1cee1b;
-  color: #323436;
   border-radius: 0.25rem;
-  border: 0px solid #1cee1b;
-  padding: 0.5rem 1.25rem;
-  min-width: 10ch;
-  min-height: 3rem;
   text-align: center;
-  line-height: 1.1;
   transition: 220ms all ease-in-out; }
   a.button:hover, a.button:active,
   button.button:hover,
@@ -750,158 +743,289 @@ button.button {
   button.button:focus {
     outline-style: solid;
     outline-color: transparent; }
-  a.button--small,
-  button.button--small {
-    font-size: 1rem;
+  a.button--flame,
+  button.button--flame {
+    background-image: linear-gradient(270deg, #d76f78 0%, #fed4a8 100%);
+    color: #323436;
+    padding: 1rem 3rem;
+    background-size: 300%;
+    background-position: right bottom;
+    transition: 1s background-position ease-in-out; }
+    a.button--flame:hover, a.button--flame:active,
+    button.button--flame:hover,
+    button.button--flame:active {
+      color: #323436;
+      background-position: left top; }
+  a.button--flame-border-light,
+  button.button--flame-border-light {
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    color: #323436;
+    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #d76f78, #fed4a8);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+    background-size: 300%;
+    background-position: right bottom;
+    transition: 0.5s background-position ease-in-out; }
+    a.button--flame-border-light:hover, a.button--flame-border-light:active,
+    button.button--flame-border-light:hover,
+    button.button--flame-border-light:active {
+      box-shadow: none;
+      color: #323436;
+      background-position: left top; }
+  a.button--flame-border-dark,
+  button.button--flame-border-dark {
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    color: #fff;
+    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #d76f78, #fed4a8);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #323436 inset;
+    background-size: 300%;
+    background-position: left top;
+    transition: 1s background-position ease-in-out; }
+    a.button--flame-border-dark:hover, a.button--flame-border-dark:active,
+    button.button--flame-border-dark:hover,
+    button.button--flame-border-dark:active {
+      color: #fff;
+      background-position: right bottom; }
+  a.button--white,
+  button.button--white {
+    font-weight: 600;
+    color: #8d8d8d;
+    background-color: #fff;
+    border: 1px solid #DBDBDB;
+    padding: 1rem 3rem; }
+    a.button--white:hover, a.button--white:active,
+    button.button--white:hover,
+    button.button--white:active {
+      color: #323436;
+      background-color: #fff;
+      border: 1px solid #8d8d8d; }
+  a.button--dark,
+  button.button--dark {
+    color: #fff;
+    background-color: #323436; }
+  a.button--form:hover,
+  button.button--form:hover {
+    background-color: #323436;
+    color: #fff; }
+  a.button--block,
+  button.button--block {
+    width: 100%;
+    padding: 0.5rem 0; }
+
+/* /////////////////////// E N D   B U T T O N S  /////////////////////// */
+/*
+
+
+a.button,
+button.button {
+  // Display
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: start; // Optional - see "Gotchas"
+  // Visual
+  background-color: $btnColor;
+  color: $dark;
+  border-radius: $radii;
+  border: 0px solid $btnColor;
+  //box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+  // Size
+  padding: $mi $me;
+  min-width: 10ch;
+  min-height: 3rem; //3.5rem
+  // Text
+  text-align: center;
+  line-height: 1.1;
+  // Motion
+  transition: 220ms all ease-in-out;
+
+  &:hover,
+  &:active {
+    //background-color: scale-color($btnColor, $lightness: -20%);
+    background-color: $dark;
+    color: $primary-light;
+  }
+
+  &:focus {
+    outline-style: solid;
+    outline-color: transparent;
+    //box-shadow: 0 0 0 4px rgba(63, 128, 144, 0.34);
+  }
+
+  &--small {
+    font-size: 1rem; // was 1rem $mi $me
     font-weight: normal;
     min-height: 1.8rem;
     min-width: 5ch;
-    padding: 0.3rem 0.5rem;
-    border-radius: 0.3rem; }
-  a.button--form,
-  button.button--form {
-    font-size: 1.2rem;
+    padding: $na $mi; // was $mi $me
+    border-radius: $radii-small;
+    //outline: 1px solid red !important;
+  }
+  &--form {
+    font-size: 1.2rem; // was 1rem $mi $me
     font-weight: 300;
     min-height: 3rem;
     min-width: 3ch;
     padding: 0.15rem 1rem 0.3rem 1rem;
-    border-radius: 0.3rem;
+    border-radius: $radii-small;
     border: none;
-    color: #fff;
-    background-color: #21ba45;
-    outline: none; }
-    a.button--form:hover,
-    button.button--form:hover {
-      background-color: #323436;
-      color: #fff; }
-    a.button--form:active,
-    button.button--form:active {
-      background-color: #fff;
-      color: #323436;
-      border: 1px #323436 solid; }
-  a.button--form-hollow,
-  button.button--form-hollow {
-    font-size: 1.2rem;
+    color: $primary-light;
+    background-color: $green;
+    outline: none;
+    &:hover {
+      background-color: $dark;
+      color: $primary-light;
+    }
+    &:active {
+      //background-color: scale-color($btnColor, $lightness: -20%);
+      background-color: $primary-light;
+      color: $dark;
+      border: 1px $dark solid;
+    }
+  }
+  &--form-hollow {
+    font-size: 1.2rem; // was 1rem $mi $me
     font-weight: 300;
     min-height: 3rem;
     min-width: 3ch;
     padding: 0.15rem 1rem 0.3rem 1rem;
-    border-radius: 0.3rem;
-    border: 1px #ddd solid;
-    color: #323436;
-    background-color: #fff;
-    outline: none; }
-    a.button--form-hollow:hover,
-    button.button--form-hollow:hover {
-      background-color: #323436;
-      color: #fff;
-      border: 1px #323436 solid; }
-    a.button--form-hollow:active,
-    button.button--form-hollow:active {
-      background-color: #fff;
-      color: #323436;
-      box-shadow: 0px 0px 14px 6px rgba(50, 42, 114, 0); }
-  a.button--medium,
-  button.button--medium {
-    font-size: 2rem;
+    border-radius: $radii-small;
+    border: 1px $field-border solid;
+    color: $dark;
+    background-color: $primary-light;
+    outline: none;
+    &:hover {
+      background-color: $dark;
+      color: $primary-light;
+      border: 1px $dark solid;
+    }
+    &:active {
+      //background-color: scale-color($btnColor, $lightness: -20%);
+      background-color: $primary-light;
+      color: $dark;
+      box-shadow: 0px 0px 14px 6px rgba(50, 42, 114, 0);
+    }
+  }
+
+  &--medium {
+    font-size: 2rem; // was 1rem $mi $me
     font-weight: 300;
     min-height: 1rem;
     min-width: 3ch;
     padding: 0.15rem 0 0.4rem 0;
-    border-radius: 0.3rem;
-    background-color: #fbac08; }
-    a.button--medium:hover,
-    button.button--medium:hover {
-      background-color: #fbac08;
-      color: #323436;
-      box-shadow: 0px 0px 14px 6px rgba(251, 174, 8, 0.9); }
-    a.button--medium:active,
-    button.button--medium:active {
-      background-color: #fff;
-      color: #323436;
-      box-shadow: 0px 0px 14px 6px rgba(50, 42, 114, 0); }
-  a.button--medium-2,
-  button.button--medium-2 {
+    border-radius: $radii-small;
+    background-color: $brandYellow;
+    &:hover {
+      //background-color: scale-color($btnColor, $lightness: -20%);
+      background-color: $brandYellow;
+      color: $dark;
+      box-shadow: 0px 0px 14px 6px rgba(251, 174, 8, 0.9);
+    }
+    &:active {
+      //background-color: scale-color($btnColor, $lightness: -20%);
+      background-color: $primary-light;
+      color: $dark;
+      box-shadow: 0px 0px 14px 6px rgba(50, 42, 114, 0);
+    }
+  }
+  &--medium-2 {
     display: block;
     text-align: center;
     width: 100%;
-    font-size: 1.4rem;
+    font-size: 1.4rem; // was 1rem $mi $me
     font-weight: 400;
     min-height: 1rem;
     height: 3rem;
     min-width: 3ch;
     padding: 0.5rem 1rem 0.5rem 1rem;
-    border-radius: 0.3rem;
-    background-color: #fbac08; }
-    a.button--medium-2:hover,
-    button.button--medium-2:hover {
-      background-color: #fbac08;
-      color: #323436;
-      box-shadow: 0px 0px 14px 6px rgba(251, 174, 8, 0.9); }
-    a.button--medium-2:active,
-    button.button--medium-2:active {
-      background-color: #fff;
-      color: #323436;
-      box-shadow: 0px 0px 14px 6px rgba(50, 42, 114, 0); }
-  a.button--block,
-  button.button--block {
+    border-radius: $radii-small;
+    background-color: $brandYellow;
+    &:hover {
+      //background-color: scale-color($btnColor, $lightness: -20%);
+      background-color: $brandYellow;
+      color: $dark;
+      box-shadow: 0px 0px 14px 6px rgba(251, 174, 8, 0.9);
+    }
+    &:active {
+      //background-color: scale-color($btnColor, $lightness: -20%);
+      background-color: $primary-light;
+      color: $dark;
+      box-shadow: 0px 0px 14px 6px rgba(50, 42, 114, 0);
+    }
+  }
+  &--block {
     width: 100%;
-    padding: 0.5rem 0; }
-  a.button--white,
-  button.button--white {
+    padding: $mi 0;
+  }
+  &--white {
     width: 100%;
-    padding: 0.5rem 0 0.75rem 0;
-    background-color: #fff;
-    color: #323436; }
-    a.button--white:hover, a.button--white:active,
-    button.button--white:hover,
-    button.button--white:active {
-      background-color: #1cee1b;
-      color: #323436; }
-  a.button--outline,
-  button.button--outline {
+    padding: $mi 0 $sm 0;
+    background-color: $primary-light;
+    color: $dark;
+    &:hover,
+    &:active {
+      //background-color: scale-color($btnColor, $lightness: -20%);
+      background-color: $btnColor;
+      color: $dark;
+    }
+  }
+  &--outline {
     width: 100%;
-    padding: 0.5rem 0 0.75rem 0;
-    border: 2px solid #fff;
-    background-color: #323436 !important;
-    color: #fff; }
-  a.button--alert,
-  button.button--alert {
+    padding: $mi 0 $sm 0;
+    border: 2px solid $primary-light;
+    background-color: $dark !important;
+    color: $primary-light;
+  }
+  &--alert {
     font-size: 95%;
     max-height: 3rem;
-    padding: 0.6rem 1.25rem 0.75rem 1.25rem;
-    border: 2px solid #fff;
+    padding: 0.6rem $me $sm $me;
+    border: 2px solid $primary-light;
     background-color: transparent !important;
-    color: #fff;
-    border-radius: 0.25rem; }
-  a.button--archive,
-  button.button--archive {
+    color: $primary-light;
+    border-radius: $radii;
+  }
+  &--archive {
+    //position: static;
     float: right;
     font-size: 1rem;
     width: 8rem;
-    border-radius: 0.25rem;
-    padding: 0.75rem 0.5rem 0.75rem 2rem;
-    border: 1px solid #ddd;
+    border-radius: $radii;
+    padding: $sm $mi $sm $mexl;
+    border: 1px solid $field-border;
+    //background-color: none !important;
     color: #aaa;
     background-color: transparent;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 11'%3E%3Cpath fill='%23AAA' d='M1 10.92l2.51-2.21h7.05A1.4 1.4 0 0012 7.34v-6A1.41 1.41 0 0010.56 0H1.44A1.41 1.41 0 000 1.38v9a.69.69 0 00.71.62.76.76 0 00.29-.08z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: left 1rem center;
-    background-size: 1rem; }
-    a.button--archive:hover, a.button--archive:active,
-    button.button--archive:hover,
-    button.button--archive:active {
+    background-size: 1rem;
+    //height: 1rem;
+    //width: 2rem;
+    //margin-right: 1.5rem; // keep flag from dots
+    //justify-self: end; //margin-left: 0.82rem;
+    &:hover,
+    &:active {
+      //background-color: scale-color($btnColor, $lightness: -20%);
+      //background-color: $btnColor;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 11'%3E%3Cpath fill='%231e1567' d='M1 10.92l2.51-2.21h7.05A1.4 1.4 0 0012 7.34v-6A1.41 1.41 0 0010.56 0H1.44A1.41 1.41 0 000 1.38v9a.69.69 0 00.71.62.76.76 0 00.29-.08z'/%3E%3C/svg%3E");
-      border: 1px solid #323436;
-      color: #323436;
-      cursor: pointer; }
+      border: 1px solid $dark;
+      color: $dark;
+      cursor: pointer;
+    }
+  }
+}
 
-@media only screen and (min-width: 1500px) {
-  .person a.button {
-    height: 3rem;
-    font-size: 1.2rem; } }
-
-/* /////////////////////// E N D   B U T T O N S  /////////////////////// */
+*/
 /*
 //added html because of mega margin
 html {
@@ -913,5 +1037,569 @@ body {
   background: #323436;
   overscroll-behavior: none; }
 
-a {
-  color: #fff; }
+.wrapper {
+  padding: 1rem;
+  max-width: 1700px; }
+  @media only screen and (min-width: 768px) {
+    .wrapper {
+      padding: 2rem; } }
+  @media only screen and (min-width: 1300px) {
+    .wrapper {
+      padding: 4rem; } }
+  @media only screen and (min-width: 1700px) {
+    .wrapper {
+      margin: 0 auto; } }
+
+header {
+  background: #fff;
+  z-index: 105;
+  position: fixed;
+  top: 0;
+  height: 4.5rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transition: all 0.5s ease-out; }
+  @media only screen and (min-width: 2400px) {
+    header {
+      width: auto;
+      margin: 0 10%; } }
+  @media only screen and (min-width: 2800px) {
+    header {
+      width: auto;
+      margin: 0 15%; } }
+  @media only screen and (min-width: 3200px) {
+    header {
+      width: 162.5rem;
+      margin: auto; } }
+
+@media only screen and (min-width: 768px) {
+  header .minimise {
+    transform: translate3d(0, -5rem, 0);
+    transition: all 0.5s ease-in;
+    height: 9.75rem; } }
+
+/* //this is the generic nav when a user is not logged in
+  .siteNav header {
+    background: $dark;
+    z-index: 2; //was 100
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 4.45rem;
+    width: 100%;
+    @include respond(768) {
+      height: 7rem;
+    }
+  }
+  */
+.login-btnHolder {
+  position: fixed;
+  width: 71px;
+  height: 44px;
+  z-index: 11;
+  right: 134px;
+  top: 13px;
+  background: #19d118;
+  box-shadow: 0px 0px 3px #19d118;
+  color: #323436;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  pointer-events: all;
+  transition: 0.2s ease-in-out;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+  @media only screen and (min-width: 500px) {
+    .login-btnHolder {
+      right: 136px; } }
+  @media only screen and (min-width: 768px) {
+    .login-btnHolder {
+      display: none; } }
+
+.menu-btnHolder {
+  position: fixed;
+  width: 105px;
+  height: 44px;
+  z-index: 11;
+  right: 1.25rem;
+  top: 13px;
+  background: transparent;
+  color: #323436;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  pointer-events: all;
+  transition: 0.2s ease-in-out;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+  @media only screen and (min-width: 768px) {
+    .menu-btnHolder {
+      display: none; } }
+
+.menu-btnHolder:hover,
+.login-btnHolder:hover {
+  transition: 0.2s ease-in-out; }
+  @media only screen and (min-width: 768px) {
+    .menu-btnHolder:hover,
+    .login-btnHolder:hover {
+      display: none; } }
+
+.login-btnHolder a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  width: 73px;
+  height: 44px;
+  line-height: 1.4;
+  padding: 10px 15px 0 15px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+  @media only screen and (min-width: 768px) {
+    .login-btnHolder a {
+      display: none; } }
+
+.butWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  width: 73px;
+  height: 44px;
+  line-height: 1.4;
+  padding: 10px 15px 0 15px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+  @media only screen and (min-width: 768px) {
+    .butWrap {
+      display: none; } }
+
+.menu-btn {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 102px;
+  cursor: pointer;
+  padding: 10px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+  @media only screen and (min-width: 768px) {
+    .menu-btn {
+      display: none; } }
+
+.menu-btn .btn-line {
+  width: 22px;
+  height: 3px;
+  margin: 0 0 6px 55px;
+  background: #323436;
+  transition: 0.4s ease-in-out; }
+
+.menu-btn.close .btn-line {
+  background: #323436; }
+
+.menu-btn.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(0.35rem, 0.4rem); }
+
+.menu-btn.close .btn-line:nth-child(2) {
+  opacity: 0; }
+
+.menu-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(0.41rem, -0.45rem); }
+
+.menu-btn > :last-child {
+  margin-bottom: 0 !important; }
+
+nav.primary {
+  position: fixed;
+  z-index: 3;
+  top: 4.5rem;
+  right: 0;
+  width: 100%;
+  visibility: hidden;
+  transition: all 0.4s ease-in; }
+  @media only screen and (min-width: 768px) {
+    nav.primary {
+      position: absolute;
+      visibility: visible;
+      width: auto;
+      right: 1.25rem;
+      top: 6.25rem;
+      outline: 1px; } }
+
+nav.primary.show {
+  visibility: visible; }
+
+.menu-nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: left;
+  padding-top: 5rem;
+  width: 100%;
+  height: 96vh;
+  overflow: hidden;
+  background: #323436;
+  transform: translate3d(-100%, 0, 0);
+  transition: all 0.4s ease-out; }
+  @media only screen and (min-width: 768px) {
+    .menu-nav {
+      padding: 0;
+      height: auto;
+      background: none; } }
+
+.menu-nav.show {
+  transform: translate3d(0, 0, 0); }
+
+nav.primary .nav-item {
+  transform: translate3d(0, 0, 0);
+  transition: all 0.4s ease-in; }
+
+nav.primary .nav-item.show {
+  transform: translate3d(0, 0, 0); }
+
+nav.primary .nav-item a.active {
+  color: #1cee1b; }
+  @media only screen and (min-width: 768px) {
+    nav.primary .nav-item a.active {
+      color: #323436;
+      border-bottom: 3px solid #1e1567; } }
+
+/*
+    &:nth-child(1) {
+      transition-delay: 0s;
+    }
+    &:nth-child(2) {
+      transition-delay: 0.1s;
+    }
+    &:nth-child(3) {
+      transition-delay: 0.2s;
+    }
+    &:nth-child(4) {
+      transition-delay: 0.3s;
+    }
+    */
+nav.primary .nav-link {
+  display: inline-block;
+  position: relative;
+  font-size: 1.4rem;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2721.763%27%20height%3D%2722.008%27%3E%3Cg%20data-name%3D%27Group%2011345%27%20fill%3D%27none%27%20stroke%3D%27%23fff%27%20stroke-width%3D%272%27%3E%3Cpath%20data-name%3D%27Path%2012567%27%20d%3D%27M9.91%2021.301l10.438-10.438L10.192.707%27%20stroke-miterlimit%3D%2710%27%2F%3E%3Cpath%20data-name%3D%27Path%2012568%27%20d%3D%27M0%2011.004h20.348%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat;
+  background-position-y: 0.225rem;
+  background-position-x: 0.1rem;
+  padding-left: 2.5rem;
+  color: #fff;
+  text-decoration: none;
+  transition: all 1s ease-out;
+  /*
+    &:hover {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21.763 22.008'%3E%3Cg data-name='Group 11345' fill='none' stroke='%231cee1b' stroke-width='2'%3E%3Cpath data-name='Path 12567' d='M9.91 21.301l10.438-10.438L10.192.707' stroke-miterlimit='10'/%3E%3Cpath data-name='Path 12568' d='M0 11.004h20.348'/%3E%3C/g%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position-y: 0.225rem;
+      background-position-x: 0.1rem;
+      padding-left: 2.5rem;
+      text-decoration: none;
+      transition: all 1s ease-out;
+    }
+    */ }
+  @media only screen and (min-width: 768px) {
+    nav.primary .nav-link {
+      padding-left: 0;
+      background: none;
+      color: #323436; } }
+
+/*
+  .menu .nav-item:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  .menu .nav-item:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  */
+.logo {
+  display: block;
+  margin: 1.35rem 0 0 1.25rem;
+  transition: all 0.5s ease-out;
+  width: 8rem; }
+  @media only screen and (min-width: 768px) {
+    .logo {
+      width: 10rem;
+      margin: 2rem 0.75rem 0.5rem 1.75rem; } }
+
+.minimise .logo {
+  transition: all 0.4s ease-out; }
+  @media only screen and (min-width: 768px) {
+    .minimise .logo {
+      width: 6.5rem;
+      margin-top: 2.5rem; } }
+
+nav.primary ul li {
+  padding: 0 0 1.25rem 1.25rem; }
+  @media only screen and (min-width: 768px) {
+    nav.primary ul li {
+      display: inline;
+      padding: 1rem;
+      font-weight: 700; } }
+
+/*
+  nav.primary ul li a:hover {
+    color: $btnColor;
+    cursor: pointer;
+    transition: 200ms;
+    @include respond(768) {
+      color: $dark;
+      //text-decoration: underline;
+      //text-decoration: underline;
+      //padding-bottom: 2.8rem;
+      border-bottom: 3px solid $dark;
+      transition: 200ms;
+      //border-style: thin;
+    }
+  }
+  
+  nav.primary ul li a {
+    transition: none;
+    cursor: pointer;
+    @include respond(768) {
+      border-bottom: 3px solid $btnColor;
+    }
+  }
+  */
+@media only screen and (min-width: 768px) {
+  nav.primary ul {
+    display: inline; } }
+
+/*
+  .menu-btnHolder {
+    position: fixed;
+    width: 105px;
+    height: 44px;
+    z-index: 11;
+    right: 1.25rem;
+    top: 13px;
+    background: #19d118;
+    box-shadow: 0 0 3px #19d118;
+    color: #1e1567;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    pointer-events: all;
+    transition: .2s ease-in-out;
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+  }
+  .butWrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    width: 73px;
+    height: 44px;
+    line-height: 1.4;
+    padding: 10px 15px 0;
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+  }
+  
+  .menu-btn {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 102px;
+    cursor: pointer;
+    padding: 10px;
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+  }
+  .menu-btn .btn-line {
+    width: 22px;
+    height: 3px;
+    margin: 0 0 6px 55px;
+    background: #1e1567;
+    transition: .4s ease-in-out;
+  }
+  
+  
+  .menu-btn.menu-close .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(0.41rem,-0.45rem);
+  }
+  .menu-btn.menu-close .btn-line {
+    background: #1e1567;
+  }
+  .menu-btn>:last-child {
+    margin-bottom: 0!important;
+  }
+  
+  
+  .menu-nav.show {
+    transform: translateZ(0);
+  }
+  
+  nav.secondary.show {
+    visibility: visible;
+  }
+  
+  nav.secondary {
+    position: absolute;
+    height: 2rem;
+    z-index: 4;
+    margin-left: 1.25rem;
+    visibility: hidden;
+  }
+  
+  nav.secondary {
+    color: #c8bae5;
+  }
+  
+  
+  nav {
+    color: $dark;
+    background-color: $primary-light;
+    padding: $m;
+    @include respond(768) {
+      padding: $t;
+    }
+    @include respond(1300) {
+      padding: $dt;
+    }
+  }
+  nav li {
+    list-style: none;
+  }
+  .logo {
+  width: 100px;
+  height: 100px;
+  @include respond(768) {
+    width: 150px;
+    height: 150px;
+  }
+  }
+  */
+section.hero {
+  background: url("img/journey-tag.svg") top left;
+  padding: 1rem;
+  margin: -1rem; }
+  @media only screen and (min-width: 768px) {
+    section.hero {
+      padding: 2rem;
+      margin: -2rem; } }
+  @media only screen and (min-width: 1300px) {
+    section.hero {
+      padding: 4rem;
+      margin: -4rem; } }
+
+section.awake-intro {
+  color: #323436;
+  background: #fff;
+  background-image: url("img/journey-tag.svg") top left;
+  padding: 4rem 1rem;
+  margin: -1rem;
+  text-align: center; }
+  @media only screen and (min-width: 768px) {
+    section.awake-intro {
+      padding: 2rem;
+      margin: -2rem; } }
+  @media only screen and (min-width: 1300px) {
+    section.awake-intro {
+      padding: 4rem;
+      margin: -4rem; } }
+
+.bio-logo {
+  margin: auto;
+  width: 125px;
+  height: 75px; }
+  @media only screen and (min-width: 1300px) {
+    .bio-logo {
+      width: 150px;
+      height: 75px; } }
+
+h2 {
+  margin: auto;
+  font-size: clamp(1.4rem, 2vw, 2.4rem);
+  margin-bottom: 4rem;
+  font-weight: 700;
+  max-width: 60rem; }
+
+figure {
+  display: inline-block;
+  margin-bottom: 2rem;
+  width: 100%; }
+  @media only screen and (min-width: 768px) {
+    figure {
+      float: left;
+      width: 50%; } }
+
+@media only screen and (min-width: 768px) {
+  .fig1 {
+    width: 50vw;
+    border: 1px dotted red;
+    margin-left: -2rem; } }
+
+@media only screen and (min-width: 1300px) {
+  .fig1 {
+    margin-left: -4rem; } }
+
+@media only screen and (min-width: 1700px) {
+  .fig1 {
+    width: 850px; } }
+
+@media only screen and (min-width: 768px) {
+  .fig2 {
+    width: 50vw;
+    border: 1px dotted yellow;
+    margin-right: -2rem; } }
+
+@media only screen and (min-width: 1300px) {
+  .fig2 {
+    margin-right: -4rem; } }
+
+@media only screen and (min-width: 1700px) {
+  .fig2 {
+    width: 850px; } }
+
+.awake-intro figure img {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw; }
+  @media only screen and (min-width: 768px) {
+    .awake-intro figure img {
+      left: unset;
+      margin-left: unset;
+      margin-right: unset;
+      max-width: unset;
+      position: unset;
+      right: unset;
+      width: 50vw;
+      float: left; } }
+  @media only screen and (min-width: 1700px) {
+    .awake-intro figure img {
+      width: 850px; } }
+
+@media only screen and (min-width: 768px) {
+  figcaption {
+    left: unset;
+    margin-left: unset;
+    margin-right: unset;
+    max-width: unset;
+    position: unset;
+    right: unset;
+    width: 50vw;
+    float: left; } }
+
+section.journey {
+  background-image: url("img/journey-tag.svg") top left; }
+
+div[class^='gradient'], div[class*=' gradient'] {
+  color: #F00;
+  display: inline-block;
+  margin: 4rem;
+  padding: 4rem; }
+
+.gradient-flame {
+  background: linear-gradient(180deg, #fed4a8 0%, #d76f78 100%); }
+
+.gradient-chocolate {
+  background: linear-gradient(180deg, #a57877 -70%, #2b2726 80%, #222222 100%); }
+
+.light {
+  margin: -4rem;
+  padding: 4rem;
+  color: #323436;
+  background-color: #fff; }
+
+.dark {
+  margin: -4rem;
+  padding: 4rem;
+  color: #fff;
+  background-color: #323436; }

@@ -59,6 +59,140 @@ button.button {
   justify-content: center;
   align-self: start; // Optional - see "Gotchas"
   // Visual
+  //-----------background-color: $btnColor;
+  //-----------color: $dark;
+  border-radius: $radii;
+  //-----------border: 0px solid $btnColor;
+  //box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+  // Size
+  //-----------padding: $mi $me;
+  //-----------min-width: 10ch;
+  //-----------min-height: 3rem; //3.5rem
+  // Text
+  text-align: center;
+  //-----------line-height: 1.1;
+  // Motion
+  transition: 220ms all ease-in-out;
+
+  &:hover,
+  &:active {
+    //background-color: scale-color($btnColor, $lightness: -20%);
+    background-color: $dark;
+    color: $primary-light;
+  }
+
+  &:focus {
+    outline-style: solid;
+    outline-color: transparent;
+    //box-shadow: 0 0 0 4px rgba(63, 128, 144, 0.34);
+  }
+
+  &--flame {
+    //border-image-source: linear-gradient(to left, #00C853, #B2FF59);
+    background-image:  linear-gradient(270deg, rgba(215,111,120,1) 0%, rgba(254,212,168,1) 100%);
+    color: $dark;
+    padding: 1rem 3rem;
+    //background: $but-flame;
+    background-size: 300%;
+    background-position: right bottom;
+
+    transition: 1s background-position ease-in-out;
+
+    &:hover,
+    &:active {
+      color: $dark;
+      background-position: left top;
+    }
+  }
+  &--flame-border-light {
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    color: $dark;
+    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, rgba(215,111,120,1), rgba(254,212,168,1));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px $primary-light inset;
+    background-size: 300%;
+    background-position: right bottom;
+
+    transition: 0.5s background-position ease-in-out;
+    &:hover,
+    &:active {
+      box-shadow: none;
+      color: $dark;
+      background-position: left top;
+    }
+  }
+  &--flame-border-dark {
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    color: $primary-light;
+    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, rgba(215,111,120,1), rgba(254,212,168,1));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px $dark inset;
+    background-size: 300%;
+    background-position: left top;
+
+    transition: 1s background-position ease-in-out;
+    &:hover,
+    &:active {
+      color: $primary-light;
+      background-position: right bottom;
+    }
+  }
+  &--white {
+    font-weight: 600;
+    color: $dark-grey;;
+    background-color: $primary-light;
+    border: 1px solid $light-grey;
+    padding: 1rem 3rem;
+
+    &:hover,
+    &:active {
+      color: $dark;
+      background-color: $primary-light;
+      border: 1px solid $dark-grey;
+    }
+  }
+  &--dark {
+    color: $primary-light;
+    background-color: $dark;
+  }
+  &--form {
+   
+    &:hover {
+      background-color: $dark;
+      color: $primary-light;
+    }
+    &:active {
+    
+    }
+  }
+  &--block {
+    width: 100%;
+    padding: $mi 0;
+  }
+}
+
+
+/* /////////////////////// E N D   B U T T O N S  /////////////////////// */
+
+/*
+
+
+a.button,
+button.button {
+  // Display
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: start; // Optional - see "Gotchas"
+  // Visual
   background-color: $btnColor;
   color: $dark;
   border-radius: $radii;
@@ -251,10 +385,6 @@ button.button {
   }
 }
 
-.person a.button {
-  @include respond(1500) {
-    height: 3rem;
-    font-size: 1.2rem;
-  }
-}
-/* /////////////////////// E N D   B U T T O N S  /////////////////////// */
+*/
+
+

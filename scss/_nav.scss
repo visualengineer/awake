@@ -1,0 +1,483 @@
+////////////// N A V //////////////////////// 
+
+
+header {
+    //overflow: auto;
+    //-webkit-overflow-scrolling: touch;
+    background: $primary-light;
+    z-index: 105; //was 100
+    //position: absolute;
+    position: fixed;
+    top: 0;
+    height: 4.5rem;
+    left: 0;
+    right: 0;
+    //height: 11.1vh;
+    width: 100%;
+    transition: all 0.5s ease-out;
+    @include respond(768) {
+      
+    }
+    //add mega margin!
+    @include respond(2400) {
+      width: auto;
+      margin: 0 10%;
+    }
+    @include respond(2800) {
+      width: auto;
+      margin: 0 15%;
+    }
+    @include respond(3200) {
+      width: 162.5rem;
+      margin: auto;
+    }
+  }
+  
+  header .minimise {
+    //background: #000;
+    @include respond(768) {
+      //height: 8vh;
+      transform: translate3d(0, -5rem, 0);
+      transition: all 0.5s ease-in;
+      height: 9.75rem;
+    }
+  }
+  
+  /* //this is the generic nav when a user is not logged in
+  .siteNav header {
+    background: $dark;
+    z-index: 2; //was 100
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 4.45rem;
+    width: 100%;
+    @include respond(768) {
+      height: 7rem;
+    }
+  }
+  */
+  
+  ////////////////////LOGIN BUTTON - CAN BE DELETED AS OF 02/09/21 //////
+  .login-btnHolder {
+    position: fixed;
+    width: 71px;
+    height: 44px;
+    z-index: 11;
+    right: 134px;
+    top: 13px;
+    background: $greenDarker;
+    box-shadow: 0px 0px 3px $greenDarker;
+    color: $dark;
+    border-radius: $radii;
+    cursor: pointer;
+    pointer-events: all;
+    transition: 0.2s ease-in-out;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    @include respond(500) {
+      right: 136px;
+    }
+    @include respond(768) {
+      display: none;
+    }
+  }
+  ////////////////////MENU OPEN AND CLOSE BUTTON
+  .menu-btnHolder {
+    position: fixed;
+    width: 105px;
+    height: 44px;
+    z-index: 11;
+    right: $me;
+    top: 13px;
+    background: transparent;
+    //box-shadow: 0px 0px 3px $greenDarker;
+    color: $dark;
+    border-radius: $radii;
+    //outline: 1px dotted #ffcc00;
+    cursor: pointer;
+    pointer-events: all;
+    transition: 0.2s ease-in-out;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    @include respond(768) {
+      display: none;
+    }
+  }
+  .menu-btnHolder:hover,
+  .login-btnHolder:hover {
+    //background: #cef8ce;
+    //border: 1px solid $dark;
+    transition: 0.2s ease-in-out;
+    //box-shadow: 0px 0px 3px $dark;
+    //transition: transformY(20%);
+    //color: $primary-light;
+    //background: red;
+    @include respond(768) {
+      display: none;
+    }
+  }
+  
+  .login-btnHolder a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    width: 73px;
+    height: 44px;
+    line-height: 1.4;
+    padding: 10px 15px 0 15px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    @include respond(768) {
+      display: none;
+    }
+  }
+  
+  .butWrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    width: 73px;
+    height: 44px;
+    line-height: 1.4;
+    //background: #fff;
+    //opacity: 0.5;
+    padding: 10px 15px 0 15px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    @include respond(768) {
+      display: none;
+    }
+  }
+  
+  .menu-btn {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 102px;
+    cursor: pointer;
+    //background: #fff;
+    padding: 10px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    @include respond(768) {
+      display: none;
+    }
+  }
+  .menu-btn .btn-line {
+    width: 22px; //25px
+    height: 3px; //2px
+    margin: 0 0 6px 55px; //7px 55px
+    background: $dark;
+    //transition: all 0.5s ease-out;
+    //-webkit-transition: 0.4s ease-in-out;
+    //-moz-transition: 0.4s ease-in-out;
+    //-o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+  }
+  .menu-btn.close .btn-line {
+    background: $dark;
+  }
+  .menu-btn.close .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(0.35rem, 0.4rem);
+    //background: #fff;
+  }
+  .menu-btn.close .btn-line:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-btn.close .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(0.41rem, -0.45rem);
+  }
+  .menu-btn > :last-child {
+    margin-bottom: 0 !important;
+  }
+  ////////////////////END OPEN AND CLOSE BUTTON
+  
+  ///////////////////////////////////////////////////////////
+  ///////////////// P R I M A R Y  N A V ////////////////////
+  ///////////////////////////////////////////////////////////
+  nav.primary {
+    position: fixed;
+    z-index: 3;
+    top: 4.5rem; //0 //added to bring navy
+    right: 0;
+    width: 100%;
+    visibility: hidden;
+    transition: all 0.4s ease-in;
+    @include respond(768) {
+      position: absolute;
+      visibility: visible;
+      width: auto;
+      right: $me;
+      top: 6.25rem;
+      outline: 1px;
+      //background: #000;
+    }
+  }
+  
+  nav.primary.show {
+    visibility: visible;
+  }
+  // the ul inside nav.primary
+  .menu-nav {
+    //@include outLine;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: left;
+    padding-top: 5rem; //added
+    //justify-content: center;
+    width: 100%;
+    height: 96vh;
+    //margin-top: 4rem; //took this out to stop covering logo
+    overflow: hidden;
+    background: $dark;
+    transform: translate3d(-100%, 0, 0);
+    transition: all 0.4s ease-out;
+  
+    @include respond(768) {
+      padding: 0;
+      height: auto;
+      background: none;
+    }
+  }
+  .menu-nav.show {
+    transform: translate3d(0, 0, 0);
+  }
+  
+  nav.primary .nav-item {
+    transform: translate3d(0, 0, 0);
+    transition: all 0.4s ease-in;
+  }
+  nav.primary .nav-item.show {
+    transform: translate3d(0, 0, 0);
+  }
+  //.active set via js to show active current page
+  nav.primary .nav-item a.active {
+    color: $btnColor;
+    @include respond(768) {
+      color: $dark;
+      border-bottom: 3px solid #1e1567;
+      //transition: 200ms;
+    }
+  }
+  
+  /*
+    &:nth-child(1) {
+      transition-delay: 0s;
+    }
+    &:nth-child(2) {
+      transition-delay: 0.1s;
+    }
+    &:nth-child(3) {
+      transition-delay: 0.2s;
+    }
+    &:nth-child(4) {
+      transition-delay: 0.3s;
+    }
+    */
+  
+  nav.primary .nav-link {
+    //@include outLine;
+    display: inline-block;
+    position: relative;
+    font-size: 1.4rem;
+    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2721.763%27%20height%3D%2722.008%27%3E%3Cg%20data-name%3D%27Group%2011345%27%20fill%3D%27none%27%20stroke%3D%27%23fff%27%20stroke-width%3D%272%27%3E%3Cpath%20data-name%3D%27Path%2012567%27%20d%3D%27M9.91%2021.301l10.438-10.438L10.192.707%27%20stroke-miterlimit%3D%2710%27%2F%3E%3Cpath%20data-name%3D%27Path%2012568%27%20d%3D%27M0%2011.004h20.348%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E') no-repeat;
+    background-position-y: 0.225rem;
+    background-position-x: 0.1rem;
+    padding-left: 2.5rem;
+    //padding: 0.8rem 0;
+    //outline: 1px dotted #ffcc00;
+    color: #fff;
+    text-decoration: none;
+    transition: all 1s ease-out;
+    @include respond(768) {
+      padding-left: 0;
+      background: none;
+      color: $dark;
+    }
+    /*
+    &:hover {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21.763 22.008'%3E%3Cg data-name='Group 11345' fill='none' stroke='%231cee1b' stroke-width='2'%3E%3Cpath data-name='Path 12567' d='M9.91 21.301l10.438-10.438L10.192.707' stroke-miterlimit='10'/%3E%3Cpath data-name='Path 12568' d='M0 11.004h20.348'/%3E%3C/g%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position-y: 0.225rem;
+      background-position-x: 0.1rem;
+      padding-left: 2.5rem;
+      text-decoration: none;
+      transition: all 1s ease-out;
+    }
+    */
+  }
+  /*
+  .menu .nav-item:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  .menu .nav-item:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  */
+  .logo {
+    display: block;
+    margin: 1.35rem 0 0 1.25rem;
+    transition: all 0.5s ease-out;
+    width: 8rem; //added
+    @include respond(768) {
+      width: 10rem;
+      margin: $mexl $sm $mi $mex;
+    }
+  }
+  .minimise .logo {
+    transition: all 0.4s ease-out;
+    @include respond(768) {
+      width: 6.5rem;
+      margin-top: $las;
+    }
+  }
+  
+  nav.primary ul li {
+    //@include outLine;
+    //background: green;
+    padding: 0 0 $me $me;
+    @include respond(768) {
+      display: inline;
+      padding: $mes;
+      font-weight: 700;
+      //margin-right: $mel;
+    }
+  }
+  
+  /*
+  nav.primary ul li a:hover {
+    color: $btnColor;
+    cursor: pointer;
+    transition: 200ms;
+    @include respond(768) {
+      color: $dark;
+      //text-decoration: underline;
+      //text-decoration: underline;
+      //padding-bottom: 2.8rem;
+      border-bottom: 3px solid $dark;
+      transition: 200ms;
+      //border-style: thin;
+    }
+  }
+  
+  nav.primary ul li a {
+    transition: none;
+    cursor: pointer;
+    @include respond(768) {
+      border-bottom: 3px solid $btnColor;
+    }
+  }
+  */
+  //hide the uls with nav options within until ipad
+  nav.primary ul {
+    //background: red;
+    @include respond(768) {
+      display: inline;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  /*
+  .menu-btnHolder {
+    position: fixed;
+    width: 105px;
+    height: 44px;
+    z-index: 11;
+    right: 1.25rem;
+    top: 13px;
+    background: #19d118;
+    box-shadow: 0 0 3px #19d118;
+    color: #1e1567;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    pointer-events: all;
+    transition: .2s ease-in-out;
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+  }
+  .butWrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    width: 73px;
+    height: 44px;
+    line-height: 1.4;
+    padding: 10px 15px 0;
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+  }
+  
+  .menu-btn {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 102px;
+    cursor: pointer;
+    padding: 10px;
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+  }
+  .menu-btn .btn-line {
+    width: 22px;
+    height: 3px;
+    margin: 0 0 6px 55px;
+    background: #1e1567;
+    transition: .4s ease-in-out;
+  }
+  
+  
+  .menu-btn.menu-close .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(0.41rem,-0.45rem);
+  }
+  .menu-btn.menu-close .btn-line {
+    background: #1e1567;
+  }
+  .menu-btn>:last-child {
+    margin-bottom: 0!important;
+  }
+  
+  
+  .menu-nav.show {
+    transform: translateZ(0);
+  }
+  
+  nav.secondary.show {
+    visibility: visible;
+  }
+  
+  nav.secondary {
+    position: absolute;
+    height: 2rem;
+    z-index: 4;
+    margin-left: 1.25rem;
+    visibility: hidden;
+  }
+  
+  nav.secondary {
+    color: #c8bae5;
+  }
+  
+  
+  nav {
+    color: $dark;
+    background-color: $primary-light;
+    padding: $m;
+    @include respond(768) {
+      padding: $t;
+    }
+    @include respond(1300) {
+      padding: $dt;
+    }
+  }
+  nav li {
+    list-style: none;
+  }
+  .logo {
+  width: 100px;
+  height: 100px;
+  @include respond(768) {
+    width: 150px;
+    height: 150px;
+  }
+  }
+  */

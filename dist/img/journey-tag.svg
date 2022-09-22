@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="32.942" viewBox="0 0 120 32.942">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.33" y1="1.032" x2="0.98" y2="-0.999" gradientUnits="objectBoundingBox">
+      <stop offset="0.001" stop-color="#d76f78"/>
+      <stop offset="1" stop-color="#ffd4a8"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.929" y1="0.601" x2="0.106" y2="0.407" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Group_723" data-name="Group 723" transform="translate(-1256.545 -2322.901)">
+    <path id="Path_184" data-name="Path 184" d="M1363.026,2355.843H1256.545V2322.9h120Z" fill="#323436"/>
+    <text id="JOURNEY" transform="translate(1317.384 2341.616)" fill="#fff" font-size="10" font-family="FuturaPT-Book, Futura PT" letter-spacing="0.3em"><tspan x="-29.13" y="0">JOURNEY</tspan></text>
+    <g id="Group_458" data-name="Group 458" transform="translate(1269.03 2333.852)">
+      <path id="Path_185" data-name="Path 185" d="M849.917,452.688H846.7l4.273-10.188h3.207Z" transform="translate(-846.7 -442.5)" fill="url(#linear-gradient)"/>
+      <path id="Path_186" data-name="Path 186" d="M931.5,442.5h3.207l4.272,10.188h-3.217Z" transform="translate(-927.049 -442.5)" fill="url(#linear-gradient-2)"/>
+    </g>
+  </g>
+</svg>

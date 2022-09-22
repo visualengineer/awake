@@ -10,6 +10,9 @@ body {
   font-family: $font;
   color: $dark;
 }
+a {
+  color: $primary-light;
+}
 //all paragraphs but not overlay or breakdown percentages
 p :not(.slow) :not(span[class$='PerCol']),
 table:not(footer p) {
@@ -63,12 +66,8 @@ h3.url {
   }
 }
 
-nav.secondary {
-  color: $secondary-light;
-}
 nav.primary {
-  color: $primary-light;
-  font-size: $mel;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
