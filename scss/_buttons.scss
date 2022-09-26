@@ -87,6 +87,18 @@ button.button {
     //box-shadow: 0 0 0 4px rgba(63, 128, 144, 0.34);
   }
 
+  &--small {
+    font-size: 1rem; // was 1rem $mi $me
+    font-weight: normal;
+    min-height: 1.8rem;
+    min-width: 5ch;
+    padding: 0.75rem 1.25rem;
+    border-radius: $radii-small;
+    //outline: 1px solid red !important;
+    color: $primary-light;
+    background: $dark;
+  }
+
   &--flame {
     //border-image-source: linear-gradient(to left, #00C853, #B2FF59);
     background-image:  linear-gradient(270deg, rgba(215,111,120,1) 0%, rgba(254,212,168,1) 100%);
@@ -106,7 +118,7 @@ button.button {
   }
   &--flame-border-light {
     border-radius: 0.5rem;
-    padding: 1rem 2rem;
+    padding: 0.4rem 1rem 0.5rem; //padding: 1rem 2rem;
     color: $dark;
     box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
     border: solid 3px transparent;
@@ -116,11 +128,10 @@ button.button {
     box-shadow: 2px 1000px 1px $primary-light inset;
     background-size: 300%;
     background-position: right bottom;
-
     transition: 0.5s background-position ease-in-out;
     &:hover,
     &:active {
-      box-shadow: none;
+      //box-shadow: none;
       color: $dark;
       background-position: left top;
     }
@@ -146,8 +157,11 @@ button.button {
     }
   }
   &--white {
-    font-weight: 600;
-    color: $dark-grey;;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    font-size:1.75rem;
+    color: $dark;
+    //color: $dark-grey;;
     background-color: $primary-light;
     border: 1px solid $light-grey;
     padding: 1rem 3rem;

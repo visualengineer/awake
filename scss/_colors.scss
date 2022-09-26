@@ -15,12 +15,14 @@ rgba(237,139,135,1)
 rgba(255,177,154,1)
 rgba(255,198,163,1)
 rgba(255,212,168,1)
+old chocolte: rgba(165,120,119,1) / #B07877
 rgba(50,52,54,1)
+rgba(254, 212, 168, 1.0)
 */
 
 
 $grad-flame: linear-gradient(180deg, rgba(254,212,168,1) 0%, rgba(215,111,120,1) 100%);
-$grad-choc: linear-gradient(180deg, rgba(165,120,119,1) -70%, rgba(43, 39, 38, 1) 80%, rgba(34,34,34,1) 100%);
+$grad-choc: linear-gradient(180deg, rgba(176, 120, 119, 1.0) -70%, rgba(43, 39, 38, 1) 80%, rgba(34,34,34,1) 100%);
 $but-flame: linear-gradient(70deg, rgba(254,212,168,1) -30%, rgba(215,111,120,1) 150%);
 
 

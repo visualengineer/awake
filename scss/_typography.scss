@@ -3,7 +3,7 @@ $font: system-ui, -apple-system, BlinkMacSystemFont, 'Inter UI', 'SegoeUI', 'Hel
 // Master font size and line height set in reset ////////////////////////////////////////////////////////////
 ::selection {
   color: $dark;
-  background: $btnColor;
+  background: rgba(255,198,163,1);
 }
 
 body {
@@ -144,12 +144,43 @@ footer h3 {
 
 
 ///// AWAKE STYLES ADDE ////
+.glossary-grad {
+  background: -webkit-linear-gradient(360deg, rgba(255,198,163,1) 0%, rgba(215,111,120,1) 100%);
+  //background: linear-gradient(270deg, rgba(254,212,168,1) 0%, rgba(215,111,120,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 .grad {
-  font-size: 3rem;
   font-weight: 600;
   background: -webkit-linear-gradient(270deg, rgba(254,212,168,1) 0%, rgba(215,111,120,1) 100%);
   //background: linear-gradient(270deg, rgba(254,212,168,1) 0%, rgba(215,111,120,1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width:50vw;
+}
+
+.glossary p, .glossary h1 {
+  font-weight: 600;
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1.2; //clamp(1.2, 4vw, 0.8);
+}
+
+.glossary p a,  {
+  //border-bottom: 5px solid rgba(255,177,154,1);
+  //border-bottom: 5px solid rgba(254,212,168,1);
+}
+
+
+
+.footLeft, .footRight, .footRight a {
+  font-size: 0.9rem;
+  color: #808080;
+}
+.footRight a:hover {
+  color: rgba(254,212,168,1);
+}
+
+.glossary h1 {
+  color: $primary-light;
 }

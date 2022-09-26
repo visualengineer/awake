@@ -4,14 +4,32 @@ form {
 }
 
 form ul {
+  padding-right: 0; //added awake
+  padding-left: 0; //added awake
 }
 form ul li {
   margin: $sm 0;
   list-style: none;
 }
 
+////////////////////////////////////// DARK //////////////////
+
+.field-dark {
+  color: $primary-light !important;
+  background: #323436 !important;
+  border: 1px solid #585858 !important;
+}
+/*
+.field-dark input ::placeholder{
+  color: #000 !important;
+}
+*/
+.-dark  {
+  color: $primary-light !important;
+}
 
 
+////////////////////////////////////// END DARK //////////////////
 
 
 input[type='text']:hover,
@@ -88,11 +106,12 @@ label.hide {
 fieldset {
   //learn
 }
+/*
 ::placeholder {
   //color: lighten($dark:;
   color: $placeholder;
 }
-
+*/
 input[type='text'],
 input[type='email'],
 input[type='password'],

@@ -15,49 +15,39 @@ header {
     //height: 11.1vh;
     width: 100%;
     transition: all 0.5s ease-out;
+    //box-shadow: 0px 2px 8px 3px rgba(0,0,0,0.28);
     @include respond(768) {
-      
+      margin: 0 auto;
+      max-width: 1700px;
+    }
+    @include respond(1024) {
+      height: 6rem;
     }
     //add mega margin!
     @include respond(2400) {
-      width: auto;
-      margin: 0 10%;
+      //width: auto;
+      //margin: 0 10%;
     }
     @include respond(2800) {
-      width: auto;
-      margin: 0 15%;
+      //width: auto;
+      //margin: 0 15%;
     }
     @include respond(3200) {
-      width: 162.5rem;
-      margin: auto;
+      //width: 162.5rem;
+      //margin: auto;
     }
   }
   
-  header .minimise {
+  header.minimise {
     //background: #000;
     @include respond(768) {
       //height: 8vh;
       transform: translate3d(0, -5rem, 0);
       transition: all 0.5s ease-in;
-      height: 9.75rem;
+      height: 4rem;
     }
   }
-  
-  /* //this is the generic nav when a user is not logged in
-  .siteNav header {
-    background: $dark;
-    z-index: 2; //was 100
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 4.45rem;
-    width: 100%;
-    @include respond(768) {
-      height: 7rem;
-    }
-  }
-  */
-  
+  /*
   ////////////////////LOGIN BUTTON - CAN BE DELETED AS OF 02/09/21 //////
   .login-btnHolder {
     position: fixed;
@@ -81,6 +71,8 @@ header {
       display: none;
     }
   }
+*/
+
   ////////////////////MENU OPEN AND CLOSE BUTTON
   .menu-btnHolder {
     position: fixed;
@@ -206,8 +198,17 @@ header {
       visibility: visible;
       width: auto;
       right: $me;
-      top: 6.25rem;
-      outline: 1px;
+      top: 0.75rem;
+      //outline: 1px;
+      //background: #000;
+    }
+    @include respond(1024) {
+      position: absolute;
+      visibility: visible;
+      width: auto;
+      right: $me;
+      top: 1.35rem;
+      //outline: 1px;
       //background: #000;
     }
   }
@@ -227,16 +228,23 @@ header {
     height: 96vh;
     //margin-top: 4rem; //took this out to stop covering logo
     overflow: hidden;
-    background: $dark;
+    color: $dark;
+    background: $primary-light;
     transform: translate3d(-100%, 0, 0);
     transition: all 0.4s ease-out;
   
     @include respond(768) {
-      padding: 0;
-      height: auto;
-      background: none;
+      //padding: 0;
+      //height: auto;
+      //background: none;
     }
   }
+
+.menu-nav a {
+  //font-weight: normal;
+  font-size: 1.25rem;
+}
+
   .menu-nav.show {
     transform: translate3d(0, 0, 0);
   }
@@ -318,8 +326,11 @@ header {
     transition: all 0.5s ease-out;
     width: 8rem; //added
     @include respond(768) {
-      width: 10rem;
-      margin: $mexl $sm $mi $mex;
+      width:9rem;
+    }
+    @include respond(1024) {
+      margin: 1.65rem 0 0 2rem;
+      width:10rem;
     }
   }
   .minimise .logo {
@@ -330,6 +341,12 @@ header {
     }
   }
   
+  nav.primary li:first-child {
+    margin-top: 3rem;
+    //background: green;
+  }
+
+
   nav.primary ul li {
     //@include outLine;
     //background: green;
