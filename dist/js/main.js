@@ -9,129 +9,6 @@ function strict() {
 //// Journeys slider //////
 
 
-var bg = document.querySelector('.item-bg');
-var items = document.querySelectorAll('.news__item');
-var item = document.querySelector('.news__item');
-
-function cLog(content) {
-    console.log(content)
-}
-
-if($(window).width() > 800) {
-    $(document).on("mouseover", ".news__item", function (_event, _element) {
-
-        var newsItem = document.querySelectorAll('.news__item');
-        newsItem.forEach(function (element, index) {
-            element.addEventListener('mouseover', function () {
-                var x = this.getBoundingClientRect().left;
-                var y = this.getBoundingClientRect().top;
-                var width = this.getBoundingClientRect().width;
-                var height = this.getBoundingClientRect().height;
-
-                $('.item-bg').addClass('active');
-                $('.news__item').removeClass('active');
-                // $('.news__item').removeClass('active');
-
-
-                bg.style.width = width + 'px';
-                bg.style.height = height + 'px';
-                bg.style.transform = 'translateX(' + x + 'px ) translateY(' + y + 'px)';
-            });
-
-            element.addEventListener('mouseleave', function () {
-                $('.item-bg').removeClass('active');
-                $('.news__item').removeClass('active');
-            });
-
-        });
-
-    });
-}
-
-
-var swiper = new Swiper('.news-slider', {
-    effect: 'coverflow',
-    grabCursor: true,
-    loop: true,
-    centeredSlides: true,
-    keyboard: true,
-    spaceBetween: 0,
-    slidesPerView: 'auto',
-    speed: 300,
-    coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 0,
-        modifier: 3,
-        slideShadows: false
-    },
-    breakpoints: {
-        480: {
-            spaceBetween: 0,
-            centeredSlides: true
-        }
-    },
-    simulateTouch: true,
-    navigation: {
-        nextEl: '.news-slider-next',
-        prevEl: '.news-slider-prev'
-    },
-    pagination: {
-        el: '.news-slider__pagination',
-        clickable: true
-    },
-    on: {
-        init: function () {
-            var activeItem = document.querySelector('.swiper-slide-active');
-
-            var sliderItem = activeItem.querySelector('.news__item');
-
-            $('.swiper-slide-active .news__item').addClass('active');
-
-            var x = sliderItem.getBoundingClientRect().left;
-            var y = sliderItem.getBoundingClientRect().top;
-            var width = sliderItem.getBoundingClientRect().width;
-            var height = sliderItem.getBoundingClientRect().height;
-
-
-            $('.item-bg').addClass('active');
-
-            bg.style.width = width + 'px';
-            bg.style.height = height + 'px';
-            bg.style.transform = 'translateX(' + x + 'px ) translateY(' + y + 'px)';
-        }
-    }
-});
-
-swiper.on('touchEnd', function () {
-    $('.news__item').removeClass('active');
-    $('.swiper-slide-active .news__item').addClass('active');
-});
-
-swiper.on('slideChange', function () {
-    $('.news__item').removeClass('active');
-});
-
-swiper.on('slideChangeTransitionEnd', function () {
-    $('.news__item').removeClass('active');
-    var activeItem = document.querySelector('.swiper-slide-active');
-
-    var sliderItem = activeItem.querySelector('.news__item');
-
-    $('.swiper-slide-active .news__item').addClass('active');
-
-    var x = sliderItem.getBoundingClientRect().left;
-    var y = sliderItem.getBoundingClientRect().top;
-    var width = sliderItem.getBoundingClientRect().width;
-    var height = sliderItem.getBoundingClientRect().height;
-
-
-    $('.item-bg').addClass('active');
-
-    bg.style.width = width + 'px';
-    bg.style.height = height + 'px';
-    bg.style.transform = 'translateX(' + x + 'px ) translateY(' + y + 'px)';
-});
 
 
 
@@ -142,10 +19,39 @@ swiper.on('slideChangeTransitionEnd', function () {
 
 
 
+///// link drop down
+
+var dropDownValue = document.getElementById("dropDown");
+
+dropDownValue.onchange = function() {
+  if (this.selectedIndex !== 0) {
+    window.location.href = this.value;
+  }
+};
+
+//// end link drop down
 
 
+/// drop down 2 ///
 
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
 
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+/// end drop down 2 ////
 
 
 
@@ -280,9 +186,38 @@ closeButton.addEventListener('click', event => {
             classie.toggle(content, 'accordionItemCollapsed');      
           }
         }
-      }  
+      }       
     }
   });
+
+
+// Create a condition that targets viewports at least 768px wide
+const mediaQuery = window.matchMedia('(min-width: 768px)')
+
+function handleTabletChange(e) {
+  // Check if the media query is true
+  if (e.matches) {
+    // Then log the following message to the console
+    console.log('Media Query Matched!')
+    let a = document.getElementsByClassName( 'accordionTitleActive' );
+    [...a].forEach( x => x.className += '' );
+    [...a].forEach( x => x.classList.remove('accordionTitleActive') );
+    let b = document.getElementsByClassName( 'animateOut' );
+    [...b].forEach( x => x.className += ' accordionItemCollapsed' );
+    [...b].forEach( x => x.classList.remove('animateOut') );
+    let c = document.getElementsByClassName( 'animateIn' );
+    [...c].forEach( x => x.className += ' accordionItemCollapsed' );
+    [...c].forEach( x => x.classList.remove('animateIn') );
+  }
+}
+
+// Register event listener
+mediaQuery.addListener(handleTabletChange)
+
+// Initial check
+handleTabletChange(mediaQuery)
+
+
 
 /*
   window.addEventListener("resize", function() {
@@ -292,7 +227,81 @@ closeButton.addEventListener('click', event => {
       false;
     }
   })
+
+ if (window.matchMedia("(min-width: 768px)").matches) {
+        classie.remove(content, 'animateOut');
+        classie.remove(content, 'animateIn');
+        if(classie.has(content, 'accordionItemActive')) {
+          classie.remove(content, 'accordionItemActive');
+          classie.add(content, 'accordionItemCollapsed');
+        } else {
+          false;
+        }
+      } else {
+        false;
+      }
+
+
+
+@ 768 remove all instances of .animateOut and .animateIn and replace .accordianTitle Active with .accordionItemCollapsed
+
+
+
+
 */
+
+
+/////////////////////////////////////////////////////////////////////////////////////////ANIMATE ELEMNTS ON SCROLL /////////////////////
+/////////////////////
+
+const scrollElements = document.querySelectorAll(".js-scroll");
+
+const elementInView = (el, dividend = 1) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop <=
+    (window.innerHeight || document.documentElement.clientHeight) / dividend
+  );
+};
+
+const elementOutofView = (el) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop > (window.innerHeight || document.documentElement.clientHeight)
+  );
+};
+
+const displayScrollElement = (element) => {
+  element.classList.add("scrolled");
+};
+
+const hideScrollElement = (element) => {
+  element.classList.remove("scrolled");
+};
+
+const handleScrollAnimation = () => {
+  scrollElements.forEach((el) => {
+    if (elementInView(el, 1.25)) {
+      displayScrollElement(el);
+    } else if (elementOutofView(el)) {
+      hideScrollElement(el)
+    }
+  })
+}
+
+window.addEventListener("scroll", () => { 
+  handleScrollAnimation();
+});
+
+
+
+
+
+
+
+
 
 
 
@@ -320,7 +329,8 @@ function addShadow() {
 */
 ////////////////////////////////////////////////////////
 /////////////// SMOOTH SCROLLING ///////////////////////
-////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+/*
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -330,6 +340,54 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
   });
 });
+*/
+
+// Smooth Scroll to #links | with Off-Set ==================================== //
+
+//get all # links in the document
+let links = document.querySelectorAll('a[href*="#"]');
+// console.log(links);
+
+//assign a click event to all the # links
+for(let l = 0; l < links.length; l++) {
+    links[l].addEventListener('click', scrollMe, false);
+}
+
+function scrollMe(e) {
+    e.preventDefault(); //needed in order for the scroll to work
+
+    // get hash property
+    let hash = e.target.hash;
+
+    //check for empty hash
+    if(hash) {
+
+        // remove the # from the hash string
+        // so we can use it to reference the element by its ID.
+        let elemId = hash.replace('#', '');
+
+        // Get Element we will be scrolling to
+        let element = document.getElementById(elemId);
+
+        // Set top off-set. Adjust as needed.
+        let headerOffset = 100;
+
+        // Get element's position relative to the viewport.
+        let elementPos = element.getBoundingClientRect().top;
+        // https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
+
+        // Get final position we will scroll to
+        let offsetPos = elementPos + window.pageYOffset - headerOffset;
+        // https://developer.mozilla.org/en-US/docs/Web/API/Window/pageYOffset
+        
+        // Scroll to that element
+        window.scrollTo({
+            top: offsetPos,
+            behavior: 'smooth'
+        });
+        // https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
+    }
+}
 
 
 //////////////// J S   C O P Y   O N   C O D E   S N I P P E T   /////////////////
@@ -416,6 +474,8 @@ function toggleMenu() {
 ////////////  N A V  B A R   M I N I M I S E R  ////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
+
+
 const $mainHeader = document.getElementsByTagName('header')[0];
 //console.log($mainHeader);
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
@@ -430,4 +490,26 @@ function scrollFunction() {
     $mainHeader.classList.remove('minimise');
   }
 }
+
+/*
+document.getElementById("navbar").style.top = "0";
+
+let scroll_position = 0;
+let scroll_direction;
+
+window.addEventListener('scroll', function(e){
+    scroll_direction = (document.body.getBoundingClientRect()).top > scroll_position ? 'up' : 'down';
+    scroll_position = (document.body.getBoundingClientRect()).top;
+    console.log(scroll_direction);
+
+  if (scroll_direction == 'up') {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+   
+});
+
+*/
+
 

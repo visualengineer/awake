@@ -31,7 +31,7 @@
   <body>
     <div class="wrapper">
 
-      <header>
+      <header id="navbar"> <!-- id added to hide using alternative script-->
         <!--<div class="login-btnHolder">
           <a href="login.html">Login</a>
         </div>-->
@@ -56,77 +56,68 @@
         <!--need if logged in and not logged in styles here?-->
       </header>
       <main>
-
-
-        <div class="share-dialog">
-          <div>
-            <h3 class="dialog-title">Share this journey</h3>
-            <button class="close-button"><svg><use href="#close"></use></svg></button>
-          </div>
-          <div class="targets">
-            <a class="sharebutton"><svg><use href="#facebook"></use></svg><span>Facebook</span></a>
-            <a class="sharebutton"><svg><use href="#twitter"></use></svg><span>Twitter</span></a>
-            <a class="sharebutton"><svg><use href="#linkedin"></use></svg><span>LinkedIn</span></a>
-             <a class="sharebutton" href="mailto:someone@youknow.com?&subject=I%20thought%20you%20might%20like%20this&body=https://awakespace.co"><svg><use href="#email"></use></svg><span>Email</span></a>
-          </div>
-          <div class="link">
-            <input class="pen-url" value="https://awakespace.co">
-            <button class="copy-link">Copy Link</button>
-          </div>
-        </div>
-
-   
         <section class="spacer"></section>
-
+        <!--///////////////////////////-->
         <section class="hero">
           <img src="img/journey-tag.svg" alt="Awake logo" class="tag">
           <a href="javascript:;" class="button button--small share share-button">Share</a>
-          <img src="https://via.placeholder.com/300" alt="Elephant at sunset">
+          <!--<img src="https://via.placeholder.com/300" alt="Elephant at sunset">-->
           <div class="hero-panel">
           <h1>WAY OF THE HERO</h1>
           <h2>Face adversity, manage your emotions & find inner peace</h2>
           <h4>Learn the key principles of Cognitive Behavioural Therapy, Mindfulness, Breathwork,  Acceptance & Commitment Therapy & Stoic Wisdom.</h4>
-          <a href="javascript:;" class="button button--small">Trailer</a>
-          <a href="javascript:;" class="button button--small">Explore</a>
+          <a href="https://en.wikipedia.org/wiki/History_of_the_telescope" class="button button--small trailer">Trailer</a>
+          <a href="journeys.html" class="button button--small explore">Explore</a>
           </div>
-          
         </section>
-
         <!--///////////////////////////-->
-
+        <section style="background: white; margin-top: 0 !important; padding-top: 0 !important;">
+          <div class="awakepaper">
+            <div class="paperContent">
+              <h3>Weekly Awakepaper<span style="font-weight: 300 !important; font-size: 90%; vertical-align: top; margin-left: 0.1rem;">&reg;</span></h3>
+              <p class="grad">Learn therapeutic wisdom, optimise emotional intelligence and fulfil your full potential!</p>
+            </div>
+            <div class="paperFields">
+              <form action="/action_page.php" method="get" target="_blank" class="contact" id="contactForm">
+                <ul>
+                  <li>
+                    <!--<label for="email" class="text-field error-text">Email &#42; - Please check this address</label>-->
+                    <label for="email" class="text-field -dark">Your email address</label>
+                    <input type="text" id="email" name="email" placeholder="you@yourdomain.com" class="field-dark" />
+                </li>
+                <li>
+                    <button class="button button--flame-border-dark-form">Get paper</button>
+                </li>
+                </ul>
+              </form>
+            </div>
+          </div><!--end .awakepaper -->
+        </section>
+        <!--///////////////////////////-->
         <section class="awake-intro">
-          <img src="img/awake-logo.svg" alt="Awake logo" class="bio-logo">
-          <h2>We take the best of therapeutic wisdom, ancient philosophy and coaching theory and package them into innovative self-development journeys.</h2>
-          <h2>Each bespoke Awake journey includes masterclass videos, guided meditations, workbook assignments and live webinars hosted by qualified experts.</h2>
-         <figure class="fig1">
+          <img src="img/awake-logo.svg" alt="Awake logo" class="bio-logo js-scroll fade-in">
+          <h2 class="scroll-element js-scroll fade-in">We take the best of therapeutic wisdom, ancient philosophy and coaching theory and package them into innovative self-development journeys.</h2>
+          <hr class="js-scroll fade-in">
+          <h2 class="scroll-element js-scroll fade-in">Each bespoke Awake journey includes masterclass videos, guided meditations, workbook assignments and live webinars hosted by qualified experts.</h2>
+          <figure class="fig1 scroll-element js-scroll slide-left">
             <img src="https://via.placeholder.com/300" alt="Elephant at sunset">
             <figcaption>An Awake Masterclass video</figcaption>
-        </figure>
-        <figure class="fig2">
-          <img src="https://via.placeholder.com/300" alt="Elephant at sunset">
-          <figcaption>An Awake workbook spread</figcaption>
-      </figure>
-
-
-
-         <div class="signoff">
-          <a href="#journey-steps" class="button button--white">Tell me more</a>
-          <!-- flame on rollover -->
-        </div>
-
-
-
-
+          </figure>
+          <figure class="fig2 scroll-element js-scroll slide-right">
+            <img src="https://via.placeholder.com/300" alt="Elephant at sunset">
+            <figcaption>An Awake workbook spread</figcaption>
+          </figure>
+          <div class="signoff">
+            <a href="#journey-steps" class="button button--white">Tell me more</a>
+            <!-- flame on rollover -->
+          </div>
         </section>
-
-
         <!--///////////////////////////-->
-
-           <section class="journey-steps" id="journey-steps">
-          <h2>Awake journey - the steps</h2>
-          <h3 class="glossary-grad">We have created a unique four-part learning process. This journey of contemplation and discovery takes you from knowing to being, making the wisdom central of your everyday reality.</h3>
-          <!--<div class="container"></div>-->
-            <div class="accordion">
+        <section class="journey-steps" id="journey-steps">
+            <h2 class="js-scroll slide-left">Awake journey - the steps</h2>
+            <h3 class="glossary-grad js-scroll fade-in">We have created a unique four-part learning process. This journey of contemplation and discovery takes you from knowing to being, making the wisdom central of your everyday reality.</h3>
+            <!--<div class="container"></div>-->
+            <div class="accordion scroll-element js-scroll fade-in-bottom">
               <dl>
                 <dt><a class="accordionTitle dtvideo" href="#"><img src="img/icon-video-2.svg" class="journeyIcon" alt="">Masterclass video</a></dt>
                 <dd class="accordionItem accordionItemCollapsed ddvideo">
@@ -140,80 +131,96 @@
                 <dd class="accordionItem accordionItemCollapsed ddmeditation">
                   <p>Fusing therapeutic wisdom with meditation, our guided audio & breathwork journeys are an innovation in this space. The meditations amplify your ability to understand, reflect and integrate new learning. </p>
                 </dd>
-                <dt><a href="#" class="accordionTitle dtwebinars"><img src="img/icon-webinar-2.svg" class="journeyIcon" alt="">Streaming Webinars</a></dt>
+                <dt><a href="#" class="accordionTitle dtwebinarsn"><img src="img/icon-webinar-2.svg" class="journeyIcon" alt="">Streaming Webinars</a></dt>
                 <dd class="accordionItem accordionItemCollapsed ddwebinars">
                   <p>Each week we deliver live streaming classes, so that you can message an expert and get your questions answered. This helps to further integrate and clarify knowledge as you progress. </p>
                 </dd>
               </dl>
             </div>
-          
-
             <div class="signoff">
-            <h3>Find out which journey is right for you?</h3>
-            <a href="javascript:;" class="button button--flame">View the journeys</a>
-          </div>
-
+              <h3>Find out which journey is right for you?</h3>
+              <a href="#journeys" class="button button--flame">View the journeys</a>
+            </div>
         </section>
-
         <!--///////////////////////////-->
-
         <section class="journeys" id="journeys">
-          <h2>Our journeys</h2>
-          <h3>Learn the tools and principles therapists & coaches use, so that you can begin your journey of self-discovery now!</h3>
-          <!--carousel-->
-
-
-
-
-<!-- Slider main container -->
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide">Slide 1</div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div>
-    ...
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
-
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
-</div>
-
-
-
-
-
-
-
-          
+          <h1 class="scroll-element js-scroll fade-in">Our journeys</h1>
+          <h2 class="scroll-element js-scroll fade-in">Learn the tools and principles therapists & coaches use, so that you can begin your journey of self-discovery now!</h2>
+            <!-- Slider main container -->
+            <div class="swiper scroll-element js-scroll slide-right">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <article class="journey-card">
+                    <div class="contentPanel">
+                      <h2>WAY OF THE HERO</h2>
+                      <h3>Face adversity, manage your emotions & find inner peace</h3>
+                    </div>
+                    <nav><a href="#0" class="trailer"></a><a href="#0" class="explore"></a><a href="#0" class="sharing"></a></nav>
+                  </article>
+                  <article class="therapies"><h6>Therapies covered</h6>
+                    <p>Cognitive behavioural therapy, Acceptance & commitment therapy, Mindfulness, Stoic Wisdom</p>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="journey-card">
+                    <div class="contentPanel">
+                      <h2>SURVIVING TINDER</h2>
+                      <h3>Learn, Grow & Evolve through the challenges of digital dating</h3>
+                    </div>
+                    <nav><a href="#0" class="trailer"></a><a href="#0" class="explore"></a><a href="#0" class="sharing"></a></nav>
+                  </article>
+                  <article class="therapies"><h6>Therapies covered</h6>
+                    <p>Attachment therapy, Transactional Analysis, Mindfulness, Cognitive Behavioural therapy</p>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="journey-card">
+                    <div class="contentPanel">
+                      <h2>Higher Love</h2>
+                      <h3>Therapeutic wisdom for emotionally intelligent relationships</h3>
+                    </div>
+                    <nav><a href="#0" class="trailer"></a><a href="#0" class="explore"></a><a href="#0" class="sharing"></a></nav>
+                  </article>
+                  <article class="therapies"><h6>Therapies covered</h6>
+                    <p>Attachment therapy Transactional Analysis - Mindfulness, Ontological Philosophy</p>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="journey-card">
+                    <div class="contentPanel">
+                      <h2>View points</h2>
+                      <h3>Enlightened perception for a peaceful future. </h3>
+                    </div>
+                    <nav><a href="#0" class="trailer"></a><a href="#0" class="explore"></a><a href="#0" class="sharing"></a></nav>
+                  </article>
+                  <article class="therapies"><h6>Therapies covered</h6>
+                    <p>Emotional Literacy, Transactional Analysis, General Semantics, Ontology</p>
+                  </article>
+                </div>
+              </div><!--end .swiper-wrapper-->
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <!-- If we need scrollbar -->
+              <!--<div class="swiper-scrollbar"></div>-->
+            </div>
         </section><!--end journeys-->
-
-
         <!--///////////////////////////-->
-
-
-
-
-
-
-      </main>
+    </main>
 
     <footer>
       <section class="glossary">
-        <h1>Awake Glossary</h1>
-        <p class="glossary-grad"><a href="glossary.html#attachment" class="glosslink">Attachment therapy</a> / <a href="glossary.html#theory">Theory</a> / <a href="glossary.html#cbt">CBT</a> / <a href="glossary.html#transactional">Transactional analysis</a> / <a href="glossary.html#act">ACT</a> / <a href="glossary.html#mindfulness">Mindfulness</a> / <a href="glossary.html#ontological">Ontological philosophy</a> / <a href="glossary.html#zen">Zen</a> / <a href="glossary.html#stoic">Stoic wisdom</a> / <a href="glossary.html#taoism">Taoism</a> / <a href="glossary.html#family">Family systems</a> / <a href="glossary.html#general">General semantics</a> / <a href="glossary.html#schema">Schema therapy</a></p>
+        <h1 class="js-scroll fade-in">Awake Glossary</h1>
+        <p class="glossary-grad scroll-element js-scroll fade-in-bottom"><a href="glossary.html#attachment" class="glosslink">Attachment therapy</a> / <a href="glossary.html#theory">Theory</a> / <a href="glossary.html#cbt">CBT</a> / <a href="glossary.html#transactional">Transactional analysis</a> / <a href="glossary.html#act">ACT</a> / <a href="glossary.html#mindfulness">Mindfulness</a> / <a href="glossary.html#ontological">Ontological philosophy</a> / <a href="glossary.html#zen">Zen</a> / <a href="glossary.html#stoic">Stoic wisdom</a> / <a href="glossary.html#taoism">Taoism</a> / <a href="glossary.html#family">Family systems</a> / <a href="glossary.html#general">General semantics</a> / <a href="glossary.html#schema">Schema therapy</a></p>
       </section>
 
 
 
-      <div class="awakepaper">
+      <div class="awakepaper scroll-element js-scroll fade-in" style="filter: drop-shadow(5px 5px 10px #282020);">
         <div class="paperContent">
           <h3>Weekly Awakepaper<span style="font-weight: 300 !important; font-size: 90%; vertical-align: top; margin-left: 0.1rem;">&reg;</span></h3>
           <p class="grad">Learn therapeutic wisdom, optimise emotional intelligence and fulfil your full potential!</p>
@@ -227,28 +234,12 @@
                 <input type="text" id="email" name="email" placeholder="you@yourdomain.com" class="field-dark" />
             </li>
             <li>
-              <button class="button button--flame-border-dark">Get paper</button>
-          </li>    
-            
-
+                <button class="button button--flame-border-dark-form">Get paper</button>
+            </li>
             </ul>
-            
           </form>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
+      </div><!--end .awakepaper -->
 
 
       <ul class="footernav">
@@ -270,26 +261,77 @@
           </a>
         </span>
       </div>
-      <span class="footLeft">Copyright &copy; 2022 Awake. <!--All rights reserved.--></span>
+      <span class="footLeft">Copyright &copy; 2022</span>
       <span class="footRight"><a href="#0" target="_blank">Terms</a> | <a href="http://jamesgarnham.com" target="_blank">Made by JG</a></span></div>
     </footer>
+    
+    <div class="share-dialog">
+      <div>
+        <h3 class="dialog-title">Yuck this looks like poo</h3>
+        <button class="close-button"><svg><use href="#close"></use></svg></button>
+      </div>
+      <div class="targets">
+        <a class="sharebutton"><svg><use href="#facebook"></use></svg><span>Facebook</span></a>
+        <a class="sharebutton"><svg><use href="#twitter"></use></svg><span>Twitter</span></a>
+        <a class="sharebutton"><svg><use href="#linkedin"></use></svg><span>LinkedIn</span></a>
+         <a class="sharebutton" href="mailto:someone@youknow.com?&subject=I%20thought%20you%20might%20like%20this&body=https://awakespace.co"><svg><use href="#email"></use></svg><span>Email</span></a>
+      </div>
+      <div class="link">
+        <input class="pen-url" value="https://awakespace.co">
+        <button class="copy-link">Copy Link</button>
+      </div>
+    </div>
+
+    <svg class="hidden">
+      <defs>
+        <symbol id="share-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></symbol>
+        
+        <symbol id="facebook" viewBox="0 0 24 24" fill="#3b5998" stroke="#3b5998" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></symbol>
+        
+        <symbol id="twitter" viewBox="0 0 24 24" fill="#1da1f2" stroke="#1da1f2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></symbol>
+        
+        <symbol id="email" viewBox="0 0 24 24" fill="#777" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></symbol>
+        
+        <symbol id="linkedin" viewBox="0 0 24 24" fill="#0077B5" stroke="#0077B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></symbol>
+        
+        <symbol id="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></symbol>
+      </defs>
+    </svg>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
-    const swiper = new Swiper('.swiper', {
-      // Optional parameters
-      direction: 'horizontal',
-      loop: true,
-    
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    
+              const swiper = new Swiper('.swiper', {
+        // Default parameters
+        slidesPerView: 'auto',
+          spaceBetween: 20,
+          centeredSlides: true,
+          //centeredSlidesBounds: true,
+          //height: 372,
+          loop: true,
+          autoplay: false,
+          //modules: [ Navigation, Pagination ],
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            breakpoints: {
+          640: {
+            //slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            //slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            //slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        },
       // And if we need scrollbar
       scrollbar: {
         el: '.swiper-scrollbar',
@@ -335,26 +377,6 @@ var swiper = new Swiper('.news-slider', {
 
 
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
-
-     
-    <svg class="hidden">
-      <defs>
-        <symbol id="share-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></symbol>
-        
-        <symbol id="facebook" viewBox="0 0 24 24" fill="#3b5998" stroke="#3b5998" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></symbol>
-        
-        <symbol id="twitter" viewBox="0 0 24 24" fill="#1da1f2" stroke="#1da1f2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></symbol>
-        
-        <symbol id="email" viewBox="0 0 24 24" fill="#777" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></symbol>
-        
-        <symbol id="linkedin" viewBox="0 0 24 24" fill="#0077B5" stroke="#0077B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></symbol>
-        
-        <symbol id="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></symbol>
-      </defs>
-    </svg>
-
-
   </body>
 </html>

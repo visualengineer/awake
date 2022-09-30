@@ -31,7 +31,7 @@
   <body>
     <div class="wrapper">
 
-      <header>
+      <header id="navbar"> <!-- id added to hide using alternative script-->
         <!--<div class="login-btnHolder">
           <a href="login.html">Login</a>
         </div>-->
@@ -50,7 +50,7 @@
   
         <nav class="primary" aria-label="primary">
           <ul class="menu-nav">
-            <li><a href="#journey">Journeys</a></li><li><a href="">Teams</a></li><li><a href="https://www.youtube.com/watch?v=av1mr3UpdZk" target="_blank" class="button button--flame-border-light">Login</a></li>
+            <li><a href="#journeys">Journeys</a></li><li><a href="">Teams</a></li><li><a href="https://www.youtube.com/watch?v=av1mr3UpdZk" target="_blank" class="button button--flame-border-light">Login</a></li>
           </ul>
         </nav>
         <!--need if logged in and not logged in styles here?-->
@@ -60,107 +60,212 @@
         <section class="spacer"></section>
 
 
-<nav class="glossaryNav">
-  <ul>
-    <li>Acceptance & Commitment Therapy</li>
-    <li>Acceptance & Commitment Therapy</li>
-    <li>Acceptance & Commitment Therapy</li>
-    <li>Acceptance & Commitment Therapy</li>
-    <li>Acceptance & Commitment Therapy</li>
-    <li>Acceptance & Commitment Therapy</li>
-    <li>Acceptance & Commitment Therapy</li>
-  </ul>
 
+
+
+
+
+
+
+
+<!--
+<nav class="glossaryDropdown" id="dropDown">
+  <select>
+    <option value="#acceptance">Acceptance & Commitment Therapy</option>
+    <option value="#attachment">Attachment Therapy</option>
+    <option value="#breathwork">Breathwork</option>
+    <option value="#cognitive">Cognitive Behavioural Therapy</option>
+    <option value="#family-constellations">Family Constellations</option>
+    <option value="#family-systems">Family Systems therapy</option>
+    <option value="#ontological">Ontological Coaching</option>
+    <option value="#transactional-analysis">Transactional Analysis</option>
+  </select>
 </nav>
+-->
 
 
         <section class="glossaryPage">
-          <h3>Acceptance & Commitment Therapy</h3>
+
+        <!--class="glossaryNav"-->
+        <!--
+          <label for="touch"><span>Navigation</span></label>               
+          <input type="checkbox" id="touch"> 
+          <ul class="slide">
+            <li><a href="#acceptance">Acceptance & Commitment Therapy</a></li>
+            <li><a href="#attachment">Attachment Therapy</a></li>
+            <li><a href="#breathwork">Breathwork</a></li>
+            <li><a href="#cognitive">Cognitive Behavioural Therapy</a></li>
+            <li><a href="#family-constellations">Family Constellations</a></li>
+            <li><a href="#family-systems">Family Systems therapy</a></li>
+            <li><a href="#ontological">Ontological Coaching</a></li>
+            <li><a href="#transactional-analysis">Transactional Analysis</a></li>
+          </ul>
+        
+        </nav> -->
+
+
+
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#acceptance">Acceptance & Commitment Therapy</a>
+            <a href="#attachment">Attachment Therapy</a>
+            <a href="#breathwork">Breathwork</a>
+            <a href="#cognitive">Cognitive Behavioural Therapy</a>
+            <a href="#family-constellations">Family Constellations</a>
+            <a href="#family-systems">Family Systems therapy</a>
+            <a href="#ontological">Ontological Coaching</a>
+            <a href="#transactional-analysis">Transactional Analysis</a>
+          </div>
+        </div>
+
+
+
+
+
+
+
+          <h3 id="acceptance">Acceptance & Commitment Therapy</h3>
           <h5>Master your emotions and follow your dreams.</h5>
-          Acceptance and Commitment Therapy or ACT is a beautiful fusion of different philosophies. Based on research-based mindfulness and behavioural principles, it’s one of the ultimate approaches to managing your emotional experience, understanding your values and living a purpose driven life. It helps you to create a rich, full and meaningful life, while accepting the pain that inevitably goes with it.
-
+          <p>Acceptance and Commitment Therapy or ACT is a beautiful fusion of different philosophies. Based on research-based mindfulness and behavioural principles, it’s one of the ultimate approaches to managing your emotional experience, understanding your values and living a purpose driven life. It helps you to create a rich, full and meaningful life, while accepting the pain that inevitably goes with it.</p>
           <p>ACT is a therapeutic approach based on core principles aimed at helping you to develop “psychological flexibility”. Being psychologically flexible means you’re aware of your thoughts and feelings but you hold them lightly, instead acting on longer-term values that contribute to a rich and meaningful life. ACT is based on the following six principles:</p>
-
           <h6>Defusion</h6>
           <p>The ability to perceive your thoughts for what they are (a bunch of words that pop into your mind frequently) and to relate to them so they have less influence over you. As you learn to defuse from unhelpful thoughts (e.g., self-criticism, worry, rumination, etc), they will have less influence over your behaviour.</p>
-
           <h6>Acceptance</h6>
           <p>Opening up and making space for unpleasant feelings or sensations. The more you allow yourself to feel your feelings, the less struggle you will experience. Conversely, when you suppress your feelings or pretend they’re not there, they tend to come back stronger than ever.</p> 
-
           <h6>Contact with the present moment</h6>
           <p>Being able to fully connect with the here and now, focusing and engaging in whatever you’re doing (instead of thinking about the past or the future).</p>
-
           <h6>Tapping into your observing self</h6>
           <p>The more you tap into the part of you who is aware of your own experiences (but who is not those experiences), the more acquainted you’ll become with your difficult thoughts and feelings, thus changing your relationship with them.</p>
-
           <h6>Values</h6>
           <p>Exploring and connecting with your values is an essential step in ACT and in living a meaningful life. Your values reflect what is truly important to you, and give you direction to live your life accordingly.</p>
-
           <h6>Committed action</h6>
           <p>This refers to actions that are driven by your values and that you do consistently. ACT brings together the best elements of different approaches, incorporating mindfulness wisdom, behavioural psychology and values- based theory to create a unique experience.</p> 
-
-
+          <hr>
+          <!--///////////////-->
+          <h3 id="attachment">Attachment Therapy</h3>
+          <h5>Take your relationships to the next level through deeper understanding of dynamics.</h5>
+          <p>Attachment therapy is one of the coolest and most effective therapies for relationships in the 21st century. Once you understand how it works, it will transform how you perceive, feel and act in your relationships. Many people have found that the quality of their relationships shifted once they learned to apply attachment wisdom to their life.</p>
+          <p>Attachment theory is the work of a psychologist called John Bowlby, who established that the way our parents connected and bonded with us as children creates the framework for how we connect and bond with others as we grow into adulthood. Human beings are born ‘wired’ to attach to early caregivers in order to survive. Bowlby theorised that the quality of these early relationships shapes your personality, resilience, resourcefulness and vulnerabilities - essentially drawing up our relationship ‘blueprint’. Attachment theory allows us to understand this underlying dynamic and question whether something that was designed and structured when we were children is fit for purpose in our adult relationships.</p>
+          <hr>
+          <!--///////////////-->
+          <h3 id="breathwork">Breathwork</h3>
+          <h5>A simple process facilitating change and your journey of self-discovery.</h5>
+          <p>Breathwork practices have been around for thousands of years. Originating from ancient wisdom, they are now becoming one of the primary and most popular methods for inner work and transformation.</p>
+          <p>Breathwork can have immediate and positive effects on your physical, emotional and mental wellbeing, including relieving tension and stimulating circulation, clearing trauma and emotional issues, or strengthening intuition and deepening meditation. Breathwork is a perfect example of the marriage between ancient wisdom now supported by modern science.</p>
+          <p>In ancient yogic teachings, the practice of directing the breath is called Pranayama, teaching you to breathe consciously, with awareness and intent. Many different breathing exercises are used to build self-awareness and focus during meditation or yoga.</p>
+          <p>Today, breathwork has evolved to include many new breathing techniques as tools for major transformation and self-healing for relief of mental, physical, and/or emotional tension. In addition to reversing the physical stress response in your body, deep breathing can also help calm and slow down the emotional turbulence in your mind. In fact, research shows that it can be a powerful therapeutic practice within itself, helping to treat depression, anxiety, insomnia and PTSD.</p>
+          <p>A daily practice, this is something that you can practice on your own, or as part of a group. A simple way to begin or continue your adventure, practising breathwork will take you on a journey of inner discovery.</p>
+          <hr>
+          <!--///////////////-->
+          <h3 id="cognitive">Cognitive Behavioural Therapy</h3>
+          <h5>Take emotional responsibility and master your emotions.</h5>
+          <p>Cognitive Behavioural Therapy or CBT gives you the tools to master your emotions. Its practical wisdom sets you on the road to emotional responsibility and inner freedom.</p>
+          <p>In life there are myriad different challenges that we have to face. We can’t always control our circumstances, but CBT shows us that we do have the freedom to control our responses to life’s obstacles. CBT is based on the premise that it is not our circumstances but the thoughts we have about them that create our emotions. When we fully understand this concept, we give ourselves the opportunity to change our thinking and transform our emotional experience. We can choose how we react.</p> 
+          <p>CBT’s creator, Albert Ellis, was heavily influenced by ancient wisdom, drawing on Buddhism, ancient Greek philosophy like Stoicism, and also (more recently) by scientific philosophy. At the heart of all these wisdom systems is the truth that we are responsible for our emotional experience. Mastering this gives us the opportunity to find peace regardless of our circumstances.</p>
+          <p>The primary tool CBT uses is to teach us to question our thinking. The scientific method is based on the concept of having a hypothesis and then testing it against evidence. CBT uses the same approach to question what we believe by using practical and empirical questions. Questioning our beliefs gives us the opportunity to find the lies and half-truths that we tell ourselves. In reality, most of our stressful thoughts are not actually true, or are just partially true.</p>
+          <p>CBT is a philosophy that you can apply to all aspects of your life, a system that allows you to take emotional responsibility and find deep inner peace.</p>
+          <hr>
+          <!--///////////////-->
+          <h3 id="family-constellations">Family Constellations</h3>
+          <h5>Beyond the family, become the person you were destined to be.</h5>
+          <p>A practical, down-to-earth process, Family Constellations is a deep exploration into the hidden forces and dynamics which shape your life, and which can show up in all areas from career, relationships, family, and health. We all have blind spots, and it’s these that can keep us stuck or blocked. Constellations allows us to see and understand the root causes of the challenges we face.</p>
+          <p>In constellations work, it’s essential to understand the wider family dynamics that you come from, in order to understand you as a person. Just like in any other system, unspoken laws operate within the family, and it’s these that drive the behaviours that we are mostly unaware of. Suffering and difficulties arise when our archaic unconscious laws are violated.</p>
+          <p>The Family Constellations experience can either happen in a group, or by using symbols and items to represent different people. Hidden unconscious dynamics are brought into awareness through role playing of the different characters in your life, to create a living map of your life and family dynamic that can be explored and understood. Amazingly, the people representing the different people in your life magically connect with the emotions, thoughts and experiences of the characters they represent.</p>
+          <p>This deep and powerful experience can not only uncover any unconscious destructive family and group dynamics, but also bring new awareness and opportunities for healing to occur. The therapist facilitates the process, ultimately ushering in a new balance and harmony to the system.</p>
+          <h6>Enneagram</h6>
+          <q>Know thyself is the beginning of wisdom</q><cite>Aristotle.</cite>
+          <p>Based on ancient wisdom, the Enneagram is a powerful personality analysis tool that facilitates self-discovery and inner transformation. Constructed over thousands of years, it has recently made its way into the mainstream world of personal development, and it offers many useful insights to help you live life to the full.</p>
+          <p>Everyone has a unique Enneagram profile, a tapestry of core beliefs, habits, traits and motivations, all woven together to form your personality. Understanding how we are ‘wired’ together is a key part of our journey of self-discovery, helping us level up to the next stage of awareness.</p>
+          <p>Through the Enneagram, we bring awareness to unhealthy habits and blocks relevant to our type. We notice and acknowledge skills and gifts we previously didn’t notice, and we are given opportunities for growth and evolution that weren’t there before.</p>
+          <p>The Enneagram doesn’t merely point out one’s external behaviour, preferences, strengths and styles. Instead, it acts like a personality x-ray, exposing hidden patterns of belief, drives, fears and capacities.</p>
+          <p>It brings to the surface subconscious motivations that drive our behaviour in specific, consistent ways. By making these motivations conscious, the Enneagram illuminates our blind spots, enabling us to respond better to life’s challenges.</p>
+          <p>As a developmental framework, the Enneagram does not just take a snapshot of who you are, but also highlights your natural gifts, helping you to experience who you can be at your best.</p>
+          <hr>
+          <!--///////////////-->
+          <h3 id="family-systems">Family Systems therapy</h3>
+          <h5>Understanding the past, transforming the present, and making space for the future.</h5>
+          <p>At the heart of the self-development journey is a greater understanding of our past and the forces that shaped our personality. Shining a light on our family history helps us to grow and evolve, so that we can take the next steps on our journey.</p>
+          <p>Family systems is a therapy approach that helps you to understand the rules, hierarchy, agreements and dynamics that gave birth to your family pattern. All of us come from a complex family structure. The relationship dynamics within our close and distant family create a pattern or template for how we relate, communicate and live with others. Once we understand the forces that shaped us and influence our current experiences, we can bring awareness to these patterns and begin to shift and step out of them where required.</p>          
+          <p>Looking at our family history and ancestry can be challenging, so Systemic work creates a framework and process to begin making sense of our past, and how it shapes both our present and future realities. It’s only when we understand the environment that we came from, that we can begin to make sense of our own behaviour and nature.</p>
+          <hr>
+          <!--///////////////-->
+          <h3 id="ontological">Ontological Coaching</h3>
+          <h5>Transform your way of being.</h5>
+          <q>The real journey of discovery consists not in seeking new landscapes, but in having new eyes.</q> <cite>Marcel Proust</cite>
+          <p>Ontological coaching is an exploration into your perception of the world and your way of being. Based on existential philosophy, it uses three areas - language, emotion and somatic awareness - to focuses on how you interpret and make sense of reality. We are meaning making machines, and each of us has a unique view of reality. This view affects how we feel and our actions.</p>
+          <p>As humans, it’s easy for us to take our interpretations of reality for granted, as if that’s just how things are. If someone sees the world as dangerous, they are likely to be risk averse and say no to opportunities. Alternatively, those who see life as an adventure are more likely to say yes to opportunities and to take risks.</p>
+          <p>How we see and make sense of the world has been shaped by longstanding personal narratives we have told ourselves. Most of the time, these narratives are invisible to us like water to the fish. The stories we believe to be true are really contexts and filters through which we experience life. Ontological coaching seeks to challenge our presuppositions and helps us to recognise that what we think of as ‘the truth’ is usually nothing more than learned narratives. These narratives are held in language, our emotions and also our body.</p>
+          <p>Bringing awareness to these encoded stories allows us to identify new ways of being, to go beyond the old self and build something new, a different structure free of the past.</p>
+          <p>Ontological coaching is a transformational system that helps us to see life in a new way. In changing our perspectives, it opens up new opportunities for experience, conversations and action. When we realise who we think we are is largely a function of what we learned, we can choose to embrace something new and learn to be in a new way.</p> 
+          
+          <h6>Stoic Wisdom</h6>
+          <p>Philosophy was at the heart of everyday life in ancient Rome, a society with wisdom as a central principle. It was for everyone - practiced and discussed on the streets by young and old, women and men so that they might live a more peaceful, enjoyable and satisfying life. Over the years it seems we have lost some of what they had back then.</p>
+          <p>Stoicism is an ancient school of thought founded over 2000 years ago by Zeno of Citium, ultimately becoming the leading philosophy of the Roman empire. Nowadays, it is experiencing a revival due to its action-focused approach, tools and techniques that help people overcome obstacles, face adversity and live a better life. It embodies ‘the way of the hero’, helping us to see that we can be the hero of our own lives.</p>
+          <p>The wisdom of Stoic Philosophy is supported by other philosophical traditions and schools of thought. Many modern-day therapy systems like CBT, ACT and Mindfulness are founded on the shoulders of ancient wisdom, sharing a universal truth that shines through and transcends any particular system.</p>
+          <p>Philosophy provides a map to live by, a way of living in peace and harmony. At the core of its teachings are the virtues of courage, wisdom, temperance and justice as a model to attain fulfilment and to get the most out of what you do. Practising Stoicism provides us with a mindset to confront modern challenges by transforming our internal resources into tools to cope and thrive. At its core, Stoicism focuses on taking action because it is in what we do what really matters. “Waste no more time arguing what a good person should be. Be one”, Marcus Aurelius preached.</p>
+          <hr>
+          <!--///////////////-->
+          <h3 id="transactional-analysis" name="transactional-analysis">Transactional Analysis</h3>
+          <h5>Understand the hidden dynamics of communication.</h5>
+          <p>Transactional Analysis is a simple way to understand yourself and other people better through a system that helps you make sense of the communication dynamics in your relationships. The principles and tools of Transactional Analysis will give you greater awareness, with which you can improve both your communication and understanding, resulting in a more satisfying, enjoyable experience of being alive.</p> 
+          <p>Our conversations with each other are shaped by our unconscious programming. When we become more aware of what might be going on for us, we can make an informed choice to do something different, particularly if we’re seeking a different result or experience. Ever wondered why some people have you reacting in unhelpful ways? Or why you keep getting drawn into repeating patterns of behaviour? “Why does this keep happening?” you may ask yourself, or “I’m not going to react this time!”.</p> 
+          <p>Transactional Analysis comes from the work of famous psychiatrist, Eric Berne. His ideas and theories have been widely used to offer us insight into why we think, feel and act the way we do, helping us to uncover what our subconscious is up to.</p>
         </section>
 
 
+
+
+        
+
       </main>
 
-    <footer>
-      <div class="awakepaper">
-        <div class="paperContent">
-          <h3>Weekly Awakepaper<span style="font-weight: 300 !important; font-size: 90%; vertical-align: top; margin-left: 0.1rem;">&reg;</span></h3>
-          <p class="grad">Learn therapeutic wisdom, optimise emotional intelligence and fulfil your full potential!</p>
-        </div>
-        <div class="paperFields">
-          <form action="/action_page.php" method="get" target="_blank" class="contact" id="contactForm">
-            <ul>
+
+      <footer>
+        <div class="awakepaper" style="filter: drop-shadow(5px 5px 10px #282020);">
+          <div class="paperContent">
+            <h3>Weekly Awakepaper<span style="font-weight: 300 !important; font-size: 90%; vertical-align: top; margin-left: 0.1rem;">&reg;</span></h3>
+            <p class="grad">Learn therapeutic wisdom, optimise emotional intelligence and fulfil your full potential!</p>
+          </div>
+          <div class="paperFields">
+            <form action="/action_page.php" method="get" target="_blank" class="contact" id="contactForm">
+              <ul>
+                <li>
+                  <!--<label for="email" class="text-field error-text">Email &#42; - Please check this address</label>-->
+                  <label for="email" class="text-field -dark">Your email address</label>
+                  <input type="text" id="email" name="email" placeholder="you@yourdomain.com" class="field-dark" />
+              </li>
               <li>
-                <!--<label for="email" class="text-field error-text">Email &#42; - Please check this address</label>-->
-                <label for="email" class="text-field -dark">Your email address</label>
-                <input type="text" id="email" name="email" placeholder="you@yourdomain.com" class="field-dark" />
-            </li>
-            </ul>
-            <button class="button button--flame-border-dark">Get paper</button>
-          </form>
+                  <button class="button button--flame-border-dark-form">Get paper</button>
+              </li>
+              </ul>
+            </form>
+          </div>
+        </div><!--end .awakepaper -->
+  
+  
+        <ul class="footernav">
+            <li><a href="#0" target="_blank">About</a></li>
+            <li><a href="#0" target="_blank">Blog</a></li>
+            <li><a href="#0" target="_blank">Content</a></li>
+            <li><a href="#0" target="_blank">Guides</a></li>
+        </ul>
+  
+        <div class="socials">
+          <span class="socialIcons">
+            <a href="https://twitter.com/tommyvanbeing" target="_blank">
+              <i class="twitter"></i></a>
+            <a href="https://www.instagram.com/awake.space/3" target="_blank">
+              <i class="instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/gymforthesoul" target="_blank">
+              <i class="linkedin"></i>
+            </a>
+          </span>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-
-
-      <ul class="footernav">
-          <li><a href="#0" target="_blank">About</a></li>
-          <li><a href="#0" target="_blank">Blog</a></li>
-          <li><a href="#0" target="_blank">Content</a></li>
-          <li><a href="#0" target="_blank">Guides</a></li>
-      </ul>
-
-      <div class="socials">
-        <span class="socialIcons">
-          <a href="https://twitter.com/_trinitylondon" target="_blank">
-            <i class="twitter"></i></a>
-          <a href="https://www.instagram.com/trinitylondonsw3" target="_blank">
-            <i class="instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/trinity-london" target="_blank">
-            <i class="linkedin"></i>
-          </a>
-        </span>
-      </div>
-      <span class="footLeft">Copyright &copy; 2022 Awake. <!--All rights reserved.--></span>
-      <span class="footRight"><a href="#0" target="_blank">Terms</a> | <a href="http://jamesgarnham.com" target="_blank">Made by JG</a></span></div>
-    </footer>
-    <script src="js/main.js"></script>
+        <span class="footLeft">Copyright &copy; 2022</span>
+        <span class="footRight"><a href="#0" target="_blank">Terms</a> | <a href="http://jamesgarnham.com" target="_blank">Made by JG</a></span></div>
+      </footer>
+      <script src="js/main.js"></script>
   </body>
 </html>
