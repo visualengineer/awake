@@ -164,6 +164,7 @@ html {
   //-webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
   //make fonts lighter on Firefox - meaning better consistency
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
   //overscroll-behavior: none;
 }
 

@@ -32,6 +32,13 @@ html {
   background: #fff;
 }
 */
+
+
+html {
+  scroll-padding-top: 10rem;   
+}
+
+
 body {
   color: $primary-light;
   background: linear-gradient(180deg, rgba(50,52,54,1) 0%, rgba(29,29,29,1) 50%);//$dark;
@@ -57,16 +64,26 @@ body {
   }
 }
 
-section, footer { //apply default margin fixes
+section, footer, .dropbtn, .dropdown-content, .sticky, .fixed { //apply default margin fixes
     padding: $m;
-    margin: 0 -$m;
+    margin-left: -$m;
+    margin-right: -$m;
     @include respond(768) {
-      padding: $t;
-      margin: 0 -$t;
+      //margin-top: -1rem;
+      padding-left: $t;
+      padding-right: $t;
+      margin-left: -$t;
+      margin-right: -$t;
     }
     @include respond(1300) {
-      padding: $dt;
-      margin: 0 -$dt;
+      //padding: $dt;
+      padding-top: 0;
+      padding-left: $dt;
+      padding-right: $dt;
+      //padding-left: -$dt;
+      //padding-right: -$dt;
+      margin-left: -$dt;
+      margin-right: -$dt;
     }
 }
 
@@ -80,22 +97,24 @@ section, footer { //apply default margin fixes
 @import '_nav';
 
 .spacer {
+  background-color: $primary-light !important;
   //background: rgba(254,231,224,1);
-  height:5.5rem;
+  height:3.5rem;
   //padding: 0 $m;
   //margin: 0 -$m;
   @include respond(768) {
    // padding: 0 $t;
    // margin: 0 -$t;
-    height: 6.5rem;
+    height: 2.5rem;
+    //ackground-color: red;
   }
   @include respond(1024) {
     // padding: 0 $t;
     // margin: 0 -$t;
-     height: 8rem;
+     height: 4rem;
    }
   @include respond(1300) {
-    height: 10rem;
+    height: 6rem;
    // padding: 0 $dt;
    // margin: 0 -$dt;
   }
@@ -124,7 +143,8 @@ section.hero::before {
   margin: 0 -$m;
   width: clamp(8rem, 2vw, 14rem);
   @include respond(768) {
-    margin: 0 -$t;
+    margin-left: -$t;
+    margin-right: -$t;
   }
   @include respond(1300) {
     margin: 0 -$dt;
@@ -346,7 +366,7 @@ section.awake-intro {
   color: $dark;
   background: $primary-light;
   background-image: url("img/journey-tag.svg") top left;
-  padding: 4rem $m;
+  padding: 2rem $m;
   text-align: center;
 }
 .awake-intro hr {
@@ -372,7 +392,13 @@ h2 {
   font-size: clamp(1.4rem, 2vw, 2.2rem);
   margin-bottom: 6rem;
   font-weight: 700;
-  max-width: 56rem;
+  max-width: 30rem;
+  @include respond(768) {
+    max-width: 40rem;
+  }
+  @include respond(1300) {
+    max-width: 56rem;
+  }
 }
 
 figure {
@@ -459,7 +485,7 @@ figure {
 ////////////// J O U R N E Y STEPS /////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 section.journey-steps {
-  padding-top: 4rem;
+  padding-top: 3rem;
   background: #323436; //linear-gradient(180deg, rgba(50,52,54,1) 0%, rgba(29,29,29,1) 50%);
   //margin: 4rem 0;
 }
@@ -924,14 +950,24 @@ section.journeys h1 {
 
   .journey-card nav a.trailer {
     margin-right:1rem;
-    background: $primary-light url('../img/journey-play.svg') no-repeat center center;
+    background: $primary-light url('../img/journey-play.svg') no-repeat 1.4rem center;
+    &:hover {
+      filter: invert(100%) sepia(100%) saturate(13%) hue-rotate(237deg) brightness(104%) contrast(104%);
+      border: 1px solid #999 !important;
+    }
   }
   .journey-card nav a.explore {
     background: $flame-one url('../img/journey-explore.svg') no-repeat center center;
+    &:hover {
+      background-color: $dark;
+    }
   }
   .journey-card nav a.sharing {
     float: right;
     background: $dark-grey-2 url('../img/journey-share.svg') no-repeat center 0.8rem;
+    &:hover {
+      filter: invert(100%) sepia(100%) saturate(13%) hue-rotate(237deg) brightness(104%) contrast(104%);
+    }
   }
 
 
@@ -1220,7 +1256,7 @@ section.journeys h1 {
       position: absolute;
       background-position: 0.9rem center;
       background-size: 0.8rem;
-      background-color: $flame-one;
+      background-color: $dark;
       border-radius: 50%;
       //display: block;
       top: 50%;
@@ -1248,7 +1284,7 @@ section.journeys h1 {
         position: absolute;
         background-position: 0.9rem center;
         background-size: 0.8rem;
-        background-color: $flame-one;
+        background-color: $dark;
         border-radius: 50%;
         //display: block;
         top: 50%;
@@ -1701,7 +1737,7 @@ section.glossary {
   grid-row: 1;
   color: $dark;
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 section.glossary p {
@@ -1796,7 +1832,11 @@ width: 100%;
 }
 
 
-
+footer .awakepaper {
+  margin-bottom: 2rem;
+  background-color: rgba(0, 0, 0, .25);
+  background-blend-mode: darken;
+}
 
 
 
@@ -1925,13 +1965,22 @@ nav.glossaryNav {
 
 
 section.glossaryPage {
-  padding-top: 10rem; //pad away from nav
+  padding-top: 5rem; //pad away from nav
   scroll-behavior: smooth;
   color: $dark;
   background: $primary-light;
   padding-bottom: 8rem !important; //fixes issues at bottom
   @include respond(768) {
-    padding: 0 37.5%; 
+    padding: 0 20%; 
+  }
+  @include respond(1024) {
+    float:right;
+    padding: 0 10vw 0 38vw;
+    padding-top: 4rem;
+  }
+  @include respond(1300) {
+    padding: 0 20rem 0 35rem;
+    padding-top: 6rem;
   }
 }
 
@@ -2016,93 +2065,191 @@ q:before {
   list-style: none;
 }
 
-
-
-
-.glossaryPage nav {
-  position: fixed;
-  top: 2.5rem;
-  left:0;
-  width: 100vw; 
-  background: #d9d9d9;
-  margin : 40px auto;
-  transition: max-height 0.15s ease-out;
-}
-
-.glossaryPage nav span {
-  padding : 1rem;
-  background : red; 
-  color : white;
-  cursor : pointer;
-  display: block;
-}
-
-.glossaryPage nav span::after {
-  float: right;
-  right: 10%;
-  content: "+";
-}
-
-.glossaryPage nav .slide {
-  clear:both;
-  width:100%;
-  max-height:0px;
-  overflow: hidden;
-  text-align: center;
-  transition: max-height 0.25s ease-in;
-}
-
-.glossaryPage nav .slide li {padding : 1rem;}
-
-#touch {position: absolute; opacity: 0; height: 0px;}    
-
-#touch:checked + .slide {max-height:400rem;} 
-
-
-
-
-/// drop down 2 ///@at-root
-/// 
-/// 
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// drop down 2 ///@at-root ////////////////////////////////////////////////////////////////
+/// ////////////////////////////////////////////////////////////////////////////////////////////////
+/// ////////////////////////////////////////////////////////////////////////////////////////////////
 /// 
 .dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
+  
+  margin-top:0;
+  background-color: #FFD9D5; //red
+  text-align: left;
+  width: 100vw;
+  color: $dark;
+  padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+  font-size: 1.25rem;
   border: none;
   cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23.317 13.964'%3E%3Cg data-name='Group 733'%3E%3Cpath data-name='Path 230' d='M22.256 1.059 11.474 11.841 1.06 1.427' fill='none' stroke='%23323436' stroke-miterlimit='10' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 1.25rem;
+  background-repeat: no-repeat;
+  background-position: center right 2.2rem;
+  @include respond(768) {
+    
+    //padding:0;
+    ///margin:1rem -2rem 0;
+    //padding: 1rem;
+  }
+  @include respond(1024) {
+    background-color: transparent;
+    width:33vw;
+    margin-left:-1.5rem;
+    background-image: none;
+    //padding:0;
+    ///margin:1rem -2rem 0;
+    //padding: 1rem;
+  }
+  @include respond(1300) {
+    width: 33rem;
+    margin-left: 0.5rem;
+  }
 }
+/*
+.dropbtn::after {
+  content: '';
+  position: absolute;
+  right:0;
+  top: 0.75rem;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23.317 13.964'%3E%3Cg data-name='Group 733'%3E%3Cpath data-name='Path 230' d='M22.256 1.059 11.474 11.841 1.06 1.427' fill='none' stroke='%23323436' stroke-miterlimit='10' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 1.25rem;
+  background-repeat: no-repeat;
+  background-position: center right 2.2rem;
+}
+.dropbtn::after :hover {
+  transform: rotate(45deg);
+}
+*/
+
+
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+  //background-color: #ffe9e7;
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+  //margin-top: 1rem;
+  position: fixed;
+  //display: inline-block;
+
+  @include respond(1024) {
+    margin-top: 1rem;
+  }
 }
 
 .dropdown-content {
-  display: none;
+  max-height:0;
+  //margin-top: 1rem; //1rem;
+  width: 100vw;
+  //display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color:#FFD9D5; //blue
+  //opacity: 0.5;;
   min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  overflow: hidden; //was auto
+  box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.1);
+  //z-index: 1;
+  transition: max-height 0.5s ease-in-out;
+  z-index: -1;
+  @include respond(768) {
+    padding-top:0;
+  }
+  @include respond(1024) {
+    max-height: 32rem;
+    float:left;
+    width:33vw;
+    margin-top: 0;
+    background-color: transparent;
+    box-shadow: none;
+    transition: none;
+    margin-left:-1.5rem;
+  }
+  @include respond(1300) {
+    width: 33rem;
+  }
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
+  color: $dark;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: .8rem 0 0.8rem 0.4rem;
   text-decoration: none;
   display: block;
+  border-bottom: 1px dotted #dab6b9;
+
+  @include respond(768) {
+    //padding:0;
+    margin-left: -1rem;
+    //padding: 1rem;
+  }
+  @include respond(1024) {
+    background-color: transparent;
+  }
+
+
+
+}
+.dropdown-content a:first-child {
+  border-top: 1px dotted #dab6b9;
+  margin-top: 1rem;
+//padding-top:1rem;
+&:hover {
+  background-color: #ffe9e7;
+  margin: 1rem -1rem 0;
+  padding: .8rem 0 0.8rem 1.4rem;
+  @include respond(768) {
+    //padding:0;
+    margin:1rem -2rem 0;
+    //padding: 1rem;
+  }
+  @include respond(1024) {
+    //background-color: transparent;
+    //font-weight: 600;
+  }
+}
 }
 
-.dropdown a:hover {background-color: #ddd;}
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+.dropdown a:hover:not(:first-child) {
+  background-color: #ffe9e7;
+  //padding: .8rem 0 0.8rem 0.4rem;
+  //padding: inherit;
+  margin: 0 -1rem;
+  padding: .8rem 0 0.8rem 1.4rem;
+  //margin:-0.5rem ;
+  @include respond(768) {
+    //padding:0;
+    margin: 0 -2rem;
+    //padding: 1rem;
+  }
+  @include respond(1024) {
+    //background-color: transparent;
+    //font-weight: 600;
+    padding-left: 0.4rem;
+    margin:0 0 0 -1rem;
+    color: #000;
+    //padding: 0;
+  }
+}
 
-.show {display: block;}
+
+
+
+
+
+.show {
+//display: block;
+max-height: 32rem;
+transition: max-height 0.5s ease-in-out;
+@include respond(1024) {
+  transition: none;
+}
+}
 /// 
 /// 
 /// 
@@ -2282,6 +2429,328 @@ header h2 {
   }
 }
 
+
+
+
+
+//////////////////start pop up
+/// 
+/// 
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  &.open {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+  &-bg {
+    position: absolute;
+    background: $dark;
+    width: 100%;
+    height: 100%;
+  }
+  &-container {
+    border-radius: 10px;
+    background: #000;
+    position: relative;
+    padding: 30px;
+  }
+  &-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    outline: none;
+    appearance: none;
+    color: $primary-light;
+    background: none;
+    border: 0px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  &-close:after {
+    content: '+';
+    position: absolute;
+    font-weight: 300;
+    font-size: 3rem;
+    width: 3rem;
+    height: 3rem;
+    transform-origin: left;
+    transform: translate(-1rem, -2.25rem) rotate(45deg) ;
+  }
+}
+
+
+/// end pop up
+
+
+.nope {
+  font-weight: 900;
+}
+
+
+
+////////////////////////////////////////////////////////////////
+////////////////////////// Journeys ///////////////////////
+////////////////////////////////////////////////////////////////
+
+/// START TABS /////
+#tabs {
+  list-style-type: none;
+  //text-align: center;
+  margin:4rem auto 0;
+  padding: 0;
+  text-align: center;
+  li {
+    display: inline-block;
+    //margin-bottom: -1px;
+    //background-color: #efefef;
+    border-radius: 1rem 1rem 0 0;
+    a {
+      color: #ccc;
+      display: block;
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: 0.025rem;
+      //height: 100%;
+      padding: 1.5rem 2rem;
+      border-radius: 0.5rem 0.5rem 0 0;
+      //border: 1px solid;
+      //border-color: #ccc #ccc transparent;
+      text-align: center;
+      text-decoration:none;
+      transition: background-color 0.25s, color 0.25s linear;
+    }
+    &:hover a {
+      color:#FFF;
+      //position: relative;
+      background-color: #111;
+      transition: background-color 0.25s, color 0.25s linear;
+    }
+    &.active a {
+      color:#000;
+      z-index: 101;
+      //position: relative;
+      background-color: #FFF;
+      transition: background-color 0.25s, color 0.25s linear;
+    }
+  }
+}
+
+#tab-contents {
+  display:grid;
+  z-index: 100;
+  position: relative;
+  margin: 0 -4rem; // so it is flush to the sides
+  font-size: 1.25rem;
+  //border: 1px solid #CCC;
+  background-color: #FFF;
+  .tab-contents {
+    grid-column:1;
+    grid-row:1;
+    padding: 1.25rem;
+    opacity: 0.01;
+    transform: translate(0, 0.5rem);
+    transition:
+    opacity 0.5s ease-in-out,
+    transform 0.25s ease-in-out;
+    
+    &.active {
+    color:$dark;
+    grid-column:1;
+    grid-row:1;
+    opacity: 1;
+      transform: translate(0, 0);
+    transition:
+    opacity 0.5s ease-in-out,
+    transform 0.25s ease-in-out;
+      //background: red;
+    }
+  }
+}
+
+div [id^="tab"] {
+  padding: 0 30% 7%;
+  //background-color: blue;
+
+  ol, ul {
+    line-height: 1.8;
+    //margin-left:0;
+    //padding-left: 0;
+    padding-left: 1.25rem;
+
+    
+  }
+
+  li::marker {
+    //content: '✝ ';
+    font-weight: 700;
+    text-align: left !important;
+    padding-right: 10rem;
+    width: 2rem;
+    display: inline-block;
+    text-indent: -1em;
+}
+
+  p:first-child {
+    margin-top: 2rem;
+  }
+  p {
+    margin-bottom: 2rem;
+  }
+
+}
+
+
+
+/// END TABS /////
+
+/// START STICKY /////
+.sticky {
+  //display:grid;
+  //align-content: center;
+  //width: auto;
+  //background: #F6D565;
+  //text-transform: uppercase;
+  transition:all .3s;
+  //min-height:4.3rem;
+  //padding:1rem 0;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  transition:all .3s;
+  max-height:2rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  //padding: 0.5rem 0;
+}
+/// END STICKY /////
+
+
+
+////// END JOURNEYS ///////
+
+
+
+//////////////////// PRICING PANELS ///////////
+section.pricing {
+background-color: $primary-light;
+text-align: center;
+padding-bottom: 8rem;
+border-top: 1px solid $light-grey;
+padding-top: 6rem;
+}
+.pricing h2 {
+  font-size:  clamp(2rem, 4vw, 2.5rem);
+  color: $dark;
+  margin: 0 auto;
+}
+.pricing h3 {
+  font-size:  clamp(1.5rem, 4vw, 2rem);
+  color: $dark;
+  margin: 0 auto;
+}
+.packageHolder {
+  display:grid;
+  text-align: center;
+  max-width: 400px;
+  margin: 4rem auto 0;
+  gap: 2rem;
+  @include respond(768) {
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    max-width: 48rem;
+  }
+  @include respond(1024) {
+    gap: 1.5rem;
+  }
+}
+
+.package {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding:2.5rem 2.5rem 5rem 2.5rem;
+  h4 {
+    text-align: left;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+}
+
+.starter {
+  background-color: #F8F8F8;
+  color: #808080;
+  @include respond(768) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.live-streaming {
+  background-color: #222;
+  color: #B4B4B4;
+  @include respond(768) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+.package ul {
+  list-style: none;
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+  line-height: 2;
+  font-weight: 600;
+  font-size: clamp(1rem, 4vw, 1.1rem);
+}
+.package a {
+  display: block;
+  //margin: 0rem;
+  //float: center;
+  //text-align: center;
+  //position: relative;
+  //display: inline-block;
+  //text-align: center;
+  //margin: 0 auto;
+}
+
+.starter h4, .starter .journeyPrice {
+  color: #323436;
+}
+.live-streaming h4, .live-streaming .journeyPrice {
+  color: $primary-light;
+}
+
+.journeyPrice {
+  font-size: clamp(2.5rem, 4vw, 2.75rem);
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.journeyPrice sup {
+  font-size: 50%;
+  margin-right: 0.5%;
+}
+
+
+/// END PRICING PANELS //////
 
 
 

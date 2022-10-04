@@ -19,8 +19,53 @@ function strict() {
 
 
 
-///// link drop down
+////// JOURNEYS TABS /////
 
+// Define variables
+var tabLabels = document.querySelectorAll("#tabs li");
+var tabPanes = document.getElementsByClassName("tab-contents");
+
+function activateTab(e) {
+  e.preventDefault();
+  
+  // Deactivate all tabs
+  tabLabels.forEach(function(label, index){
+    label.classList.remove("active");
+  });
+  [].forEach.call(tabPanes, function(pane, index){
+    pane.classList.remove("active");
+  });
+  
+  // Activate current tab
+  e.target.parentNode.classList.add("active");
+  var clickedTab = e.target.getAttribute("href");
+  document.querySelector(clickedTab).classList.add("active");
+}
+
+// Apply event listeners
+tabLabels.forEach(function(label, index){
+  label.addEventListener("click", activateTab);
+});
+
+////// END JOURNEYS TABS //////
+
+///// STICKY TABS //////
+/*
+var sticky = document.querySelector('.sticky');
+var origOffsetY = sticky.offsetTop;
+
+function onScroll(e) {
+  window.scrollY >= origOffsetY ? sticky.classList.add('fixed') :
+                                  sticky.classList.remove('fixed');
+}
+
+document.addEventListener('scroll', onScroll);
+*/
+///// END STICKY TABS //////
+
+
+///// link drop down
+/*
 var dropDownValue = document.getElementById("dropDown");
 
 dropDownValue.onchange = function() {
@@ -28,7 +73,7 @@ dropDownValue.onchange = function() {
     window.location.href = this.value;
   }
 };
-
+*/
 //// end link drop down
 
 
@@ -327,10 +372,60 @@ function addShadow() {
   }
 }
 */
+
+
+////////////////////////////////////////////////////////
+/////////////// POP UP ///////////////////////
+///////////////////////////////////////////////////////
+
+const modals = document.querySelectorAll('[data-modal]');
+const body = document.querySelector("body");
+
+modals.forEach(function (trigger) {
+  trigger.addEventListener('click', function (event) {
+    event.preventDefault();
+    const modal = document.getElementById(trigger.dataset.modal);
+    modal.classList.add('open');
+    const exits = modal.querySelectorAll('.modal-exit');
+    exits.forEach(function (exit) {
+      exit.addEventListener('click', function (event) {
+        event.preventDefault();
+        modal.classList.remove('open');
+        // Enable scroll
+        body.style.overflow = "auto";
+        //console.log('scroll on the way');
+      });
+    });
+    if (modal.classList.contains("open")) {
+      // Disable scroll
+      body.style.overflow = "hidden";
+      //console.log('scroll stopped');
+  } else {
+    false;
+  }
+
+
+  });
+});
+   
+
 ////////////////////////////////////////////////////////
 /////////////// SMOOTH SCROLLING ///////////////////////
 ///////////////////////////////////////////////////////
 /*
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+*/
+/*
+
+
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -341,7 +436,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 */
-
+/*
+document.getElementById('test').addEventListener('click', function (event) {
+  if (event.target !== event.currentTarget) {
+      do something
+  } else {
+      don't do something
+  }
+});
+*/
+/*
 // Smooth Scroll to #links | with Off-Set ==================================== //
 
 //get all # links in the document
@@ -386,10 +490,9 @@ function scrollMe(e) {
             behavior: 'smooth'
         });
         // https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
-    }
+    }   //https://css-tricks.com/snippets/jquery/smooth-scrolling/
 }
-
-
+*/
 //////////////// J S   C O P Y   O N   C O D E   S N I P P E T   /////////////////
 
 const $copyBut = document.querySelector('.copy-link');

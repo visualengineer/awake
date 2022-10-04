@@ -197,6 +197,14 @@ button.button {
   &--dark {
     color: $primary-light;
     background-color: $dark;
+    padding: 1rem 3rem;
+    border: 1px solid $dark;
+    &:hover,
+    &:active {
+      color: $dark;
+      background-color: $primary-light;
+      border: 1px solid $light-grey;
+    }
   }
   &--form {
    
