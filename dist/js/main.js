@@ -80,7 +80,7 @@ dropDownValue.onchange = function() {
 /// drop down 2 ///
 
 function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("myDropdown").classList.toggle("showDrop");
 }
 
 // Close the dropdown if the user clicks outside of it
@@ -90,8 +90,8 @@ window.onclick = function(event) {
     var i;
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+      if (openDropdown.classList.contains('showDrop')) {
+        openDropdown.classList.remove('showDrop');
       }
     }
   }
@@ -105,6 +105,16 @@ window.onclick = function(event) {
 const shareButton = document.querySelector('.share-button');
 const shareDialog = document.querySelector('.share-dialog');
 const closeButton = document.querySelector('.close-button');
+
+
+const shareClassExists = document.getElementsByClassName(
+  'share-button'
+ ).length > 0;
+
+if (shareClassExists) {
+console.log('✅ share exists on page');
+
+
 
 shareButton.addEventListener('click', event => {
   if (navigator.share) { 
@@ -129,7 +139,7 @@ closeButton.addEventListener('click', event => {
   console.log('closing from panel');
 });
 
-
+}
 
 
 /////////////////////////////////////////////////////////////////////////////////////////ACCORDION /////////////////////
@@ -152,8 +162,22 @@ closeButton.addEventListener('click', event => {
 
 /*jshint browser: true, strict: true, undef: true */
 /*global define: false */
+/*
+const classExists = document.getElementsByClassName(
+  'accordian'
+ ).length > 0;
+
+if (classExists) {
+console.log('✅ class exists on page');
+} else {
+  console.log('⛔️ class does NOT exist on page');
+}*/
+
+
+
 ( function( window ) {
-  'use strict';
+  //'use strict';
+
   function classReg( className ) {
     return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
   }
@@ -207,6 +231,15 @@ closeButton.addEventListener('click', event => {
   var $ = function(selector){
     return document.querySelector(selector);
   }
+
+  //if (document.getElementsByClassName("accordion") !== undefined) {}
+
+  let accordianExists = document.getElementsByClassName('accordion').length > 0;
+
+  if (accordianExists) {
+  console.log('✅ accordion exists');
+ 
+
   var accordion = $('.accordion');
   accordion.addEventListener("click",function(e) {
     e.stopPropagation();
@@ -236,23 +269,23 @@ closeButton.addEventListener('click', event => {
   });
 
 
+
 // Create a condition that targets viewports at least 768px wide
 const mediaQuery = window.matchMedia('(min-width: 768px)')
 
 function handleTabletChange(e) {
   // Check if the media query is true
   if (e.matches) {
-    // Then log the following message to the console
     console.log('Media Query Matched!')
-    let a = document.getElementsByClassName( 'accordionTitleActive' );
-    [...a].forEach( x => x.className += '' );
-    [...a].forEach( x => x.classList.remove('accordionTitleActive') );
-    let b = document.getElementsByClassName( 'animateOut' );
-    [...b].forEach( x => x.className += ' accordionItemCollapsed' );
-    [...b].forEach( x => x.classList.remove('animateOut') );
-    let c = document.getElementsByClassName( 'animateIn' );
-    [...c].forEach( x => x.className += ' accordionItemCollapsed' );
-    [...c].forEach( x => x.classList.remove('animateIn') );
+        let a = document.getElementsByClassName( 'accordionTitleActive' );
+        [...a].forEach( x => x.className += '' );
+        [...a].forEach( x => x.classList.remove('accordionTitleActive') );
+        let b = document.getElementsByClassName( 'animateOut' );
+        [...b].forEach( x => x.className += ' accordionItemCollapsed' );
+        [...b].forEach( x => x.classList.remove('animateOut') );
+        let c = document.getElementsByClassName( 'animateIn' );
+        [...c].forEach( x => x.className += ' accordionItemCollapsed' );
+        [...c].forEach( x => x.classList.remove('animateIn') );
   }
 }
 
@@ -262,7 +295,9 @@ mediaQuery.addListener(handleTabletChange)
 // Initial check
 handleTabletChange(mediaQuery)
 
-
+} else {
+  console.log('⛔️ accordian does not exist');
+  }
 
 /*
   window.addEventListener("resize", function() {
@@ -582,6 +617,7 @@ function toggleMenu() {
 const $mainHeader = document.getElementsByTagName('header')[0];
 //console.log($mainHeader);
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+/*
 window.onscroll = function () {
   scrollFunction();
 };
@@ -593,26 +629,29 @@ function scrollFunction() {
     $mainHeader.classList.remove('minimise');
   }
 }
+*/
 
-/*
-document.getElementById("navbar").style.top = "0";
+//document.getElementById("navbar").style.top = "0";
 
 let scroll_position = 0;
 let scroll_direction;
 
 window.addEventListener('scroll', function(e){
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     scroll_direction = (document.body.getBoundingClientRect()).top > scroll_position ? 'up' : 'down';
     scroll_position = (document.body.getBoundingClientRect()).top;
     console.log(scroll_direction);
 
   if (scroll_direction == 'up') {
-    document.getElementById("navbar").style.top = "0";
+    //document.getElementById("navbar").style.top = "0";
+    $mainHeader.classList.remove('minimise');
   } else {
-    document.getElementById("navbar").style.top = "-50px";
+    //document.getElementById("navbar").style.top = "-50px";
+    $mainHeader.classList.add('minimise');
   }
-   
+}
 });
 
-*/
+
 
 

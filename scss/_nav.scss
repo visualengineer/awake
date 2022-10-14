@@ -43,7 +43,7 @@ header {
     @include respond(768) {
       //height: 8vh;
       transform: translate3d(0, -5rem, 0);
-      transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in-out;
       height: 4rem;
     }
   }
@@ -323,7 +323,7 @@ header {
   .logo {
     display: block;
     margin: 1.35rem 0 0 1.25rem;
-    transition: all 0.5s ease-out;
+    transition: all 0.3s ease-out;
     width: 8rem; //added
     @include respond(768) {
       width:9rem;
@@ -334,7 +334,7 @@ header {
     }
   }
   .minimise .logo {
-    transition: all 0.4s ease-out;
+    transition: all 0.3s ease-out;
     @include respond(768) {
       width: 6.5rem;
       margin-top: $las;

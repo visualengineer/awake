@@ -1,5 +1,5 @@
 //$font: 'Inter UI', Helvetica Neue, Arial, sans-serif;
-$font: system-ui, -apple-system, BlinkMacSystemFont, 'Inter UI', 'SegoeUI', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+$font: "euclid_circular_b",system-ui, -apple-system, BlinkMacSystemFont, 'Inter UI', 'SegoeUI', 'HelveticaNeue', Helvetica, Arial, sans-serif;
 // Master font size and line height set in reset ////////////////////////////////////////////////////////////
 ::selection {
   color: $dark;
@@ -162,8 +162,11 @@ footer h3 {
 
 .glossary p, .glossary h1 {
   font-weight: 600;
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3.8rem);
   line-height: 1.2; //clamp(1.2, 4vw, 0.8);
+  @include respond(1700) {
+    line-height: 1.12;
+  }
 }
 
 p.glossary-grad a {

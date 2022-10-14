@@ -26,9 +26,46 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c67d62">
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <style>
+      @font-face {
+        font-family: 'euclid_circular_b';
+        font-weight: 300;
+        font-display: swap;
+        font-style: italic;
+        src:  url('fonts/euclidcircularb-light-webfont.woff2') format('woff2')
+      }
+      @font-face {
+        font-family: 'euclid_circular_b';
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+        src:  url('fonts/euclidcircularb-regular-webfont.woff2') format('woff2')
+      }
+      @font-face {
+        font-family: 'euclid_circular_b';
+        font-weight: 500;
+        font-display: swap;
+        font-style: normal;
+        src:  url('fonts/euclidcircularb-medium-webfont.woff2') format('woff2')
+      }
+       @font-face {
+        font-family: 'euclid_circular_b';
+        font-weight: 600;
+        font-display: swap;
+        font-style: normal;
+        src:  url('fonts/euclidcircularb-semibold-webfont.woff2') format('woff2')
+      }
+      @font-face {
+        font-family: 'euclid_circular_b';
+        font-weight: 700;
+        font-display: swap;
+        font-style: normal;
+        src:  url('fonts/euclidcircularb-bold-webfont.woff2') format('woff2')
+      }
+  </style>
   </head>
 
-  <body>
+  <body class="journeysPage">
     <div class="wrapper">
 
       <header id="navbar"> <!-- id added to hide using alternative script-->
@@ -81,7 +118,7 @@
         <section class="hero">
           <img src="img/journey-tag.svg" alt="Awake logo" class="tag">
           <a href="javascript:;" class="button button--small share share-button">Share</a>
-          <img src="https://via.placeholder.com/300" alt="Elephant at sunset">
+          <!--<img src="https://via.placeholder.com/300" alt="Elephant at sunset">-->
           <div class="hero-panel">
           <h1>WAY OF THE HERO</h1>
           <h2>Face adversity, manage your emotions & find inner peace</h2>
@@ -119,10 +156,10 @@
           </div><!--end .awakepaper -->
 
           <nav id="tabs" class="sticky"><!--.sticky disabled in JS -->
-            <li class="active"><a href="#tab1">Summary & Benefits</a></li>
+            <li class="active"><a href="#tab1">Summary</a></li>
             <li><a href="#tab2">Structure</a></li>
             <li><a href="#tab3">FAQs</a></li>
-            <li><a href="#tab3">Reviews</a></li>
+            <!--<li><a href="#tab3">Reviews</a></li>-->
           </nav>
           <div id="tab-contents">
             <div id="tab1" class="tab-contents active">
@@ -200,114 +237,84 @@
           </div>
         </section>
         <!--///////////////////////////-->
-
-        <section class="journeys" id="journeys">
-          <h1>Our journeys</h1>
-          <h2>Learn the tools and principles therapists & coaches use, so that you can begin your journey of self-discovery now!</h2>
-          <!--carousel-->
-
-
-<!-- Slider main container -->
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide">
-      <article class="journey-card">
-        <div class="contentPanel">
-          <h2>WAY OF THE HERO</h2>
-          <h3>Face adversity, manage your emotions & find inner peace</h3>
-        </div>
-        <nav>
-          <a href="#0" class="trailer"></a><a href="#0" class="explore"></a><a href="#0" class="sharing"></a>
-        </nav>
-      </article>
-      <article class="therapies"><h6>Therapies covered</h6>
-        <p>Cognitive behavioural therapy, Acceptance & commitment therapy, Mindfulness, Stoic Wisdom</p>
-      </article>
-    </div>
-    <div class="swiper-slide">
-      <article class="journey-card">
-        <div class="contentPanel">
-          <h2>SURVIVING TINDER</h2>
-          <h3>Learn, Grow & Evolve through the challenges of digital dating</h3>
-        </div>
-        <nav>
-          <a href="#0" class="trailer"></a><a href="#0" class="explore"></a><a href="#0" class="sharing"></a>
-        </nav>
-      </article>
-      <article class="therapies"><h6>Therapies covered</h6>
-        <p>Attachment therapy, Transactional Analysis, Mindfulness, Cognitive Behavioural therapy</p>
-      </article>
-    </div>
-    <div class="swiper-slide">
-      <article class="journey-card">
-        <div class="contentPanel">
-          <h2>Higher Love</h2>
-          <h3>Therapeutic wisdom for emotionally intelligent relationships</h3>
-        </div>
-        <nav>
-          <a href="#0" class="trailer"></a><a href="#0" class="explore"></a><a href="#0" class="sharing"></a>
-        </nav>
-      </article>
-      <article class="therapies"><h6>Therapies covered</h6>
-        <p>Attachment therapy Transactional Analysis - Mindfulness, Ontological Philosophy</p>
-      </article>
-    </div>
-    <div class="swiper-slide">
-      <article class="journey-card">
-        <div class="contentPanel">
-        <h2>View points</h2>
-        <h3>Enlightened perception for a peaceful future. </h3>
-      </div>
-        <nav>
-          <a href="#0" class="trailer"></a><a href="#0" class="explore"></a><a href="#0" class="sharing"></a>
-        </nav>
-      </article>
-      <article class="therapies"><h6>Therapies covered</h6>
-        <p>Emotional Literacy, Transactional Analysis, General Semantics, Ontology</p>
-      </article>
-    </div>
-  </div><!--end .swiper-wrapper-->
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
-
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
-  <!-- If we need scrollbar -->
-  <!--<div class="swiper-scrollbar"></div>-->
-</div>
-
-
-
-
-
-
-
-          
-        </section><!--end journeys-->
-
+        <section class="quotes" id="quotes">
+          <h2 class="scroll-element js-scroll fade-in">That is the key of this collection, being yourself. Don’t be into trends. Don’t make fashion own you, but you decide what you are, what you want to express by the way you dress and the way to live.</h2>
+          <cite>Morris Dancer</cite>
+          <span class="ref">Blah blah blah</span>
+        </section><!--end quotes-->
 
         <!--///////////////////////////-->
-
-
-
-
-
-
-      </main>
+        <section class="journeys" id="journeys">
+          <h1 class="scroll-element js-scroll fade-in">Our journeys</h1>
+          <h2 class="scroll-element js-scroll fade-in">Learn the tools and principles therapists & coaches use, so that you can begin your journey of self-discovery now!</h2>
+            <!-- Slider main container -->
+            <div class="swiper scroll-element js-scroll slide-right">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <article class="journey-card">
+                    <div class="contentPanel">
+                      <h2>WAY OF THE HERO</h2>
+                      <h3>Face adversity, manage your emotions & find inner peace</h3>
+                    </div>
+                    <nav><a  href="javascript:;" data-modal="modal-one" class="trailer"></a><a href="journeys.html" class="explore"></a><a href="javascript:;" class="sharing share-button"></a></nav>
+                  </article>
+                  <article class="therapies"><h6>Therapies covered</h6>
+                    <p>Cognitive behavioural therapy, Acceptance & commitment therapy, Mindfulness, Stoic Wisdom</p>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="journey-card">
+                    <div class="contentPanel">
+                      <h2>SURVIVING TINDER</h2>
+                      <h3>Learn, Grow & Evolve through the challenges of digital dating</h3>
+                    </div>
+                    <nav><a href="javascript:;" data-modal="modal-one" class="trailer"></a><a href="journeys.html" class="explore"></a><a href="javascript:;" class="sharing share-button"></a></nav>
+                  </article>
+                  <article class="therapies"><h6>Therapies covered</h6>
+                    <p>Attachment therapy, Transactional Analysis, Mindfulness, Cognitive Behavioural therapy</p>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="journey-card">
+                    <div class="contentPanel">
+                      <h2>Higher Love</h2>
+                      <h3>Therapeutic wisdom for emotionally intelligent relationships</h3>
+                    </div>
+                    <nav><a href="javascript:;" data-modal="modal-one" class="trailer"></a><a href="journeys.html" class="explore"></a><a href="javascript:;" class="sharing share-button"></a></nav>
+                  </article>
+                  <article class="therapies"><h6>Therapies covered</h6>
+                    <p>Attachment therapy Transactional Analysis - Mindfulness, Ontological Philosophy</p>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="journey-card">
+                    <div class="contentPanel">
+                      <h2>View points</h2>
+                      <h3>Enlightened perception for a peaceful future. </h3>
+                    </div>
+                    <nav><a href="javascript:;" data-modal="modal-one" class="trailer"></a><a href="journeys.html" class="explore"></a><a href="javascript:;" class="sharing share-button"></a></nav>
+                  </article>
+                  <article class="therapies"><h6>Therapies covered</h6>
+                    <p>Emotional Literacy, Transactional Analysis, General Semantics, Ontology</p>
+                  </article>
+                </div>
+              </div><!--end .swiper-wrapper-->
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <!-- If we need scrollbar -->
+              <!--<div class="swiper-scrollbar"></div>-->
+            </div>
+        </section><!--end journeys-->
+        <!--///////////////////////////-->
+    </main>
 
     <footer>
-      <section class="glossary">
-        <h1>Awake Glossary</h1>
-        <p class="glossary-grad"><a href="glossary.html#attachment" class="glosslink">Attachment therapy</a> / <a href="glossary.html#theory">Theory</a> / <a href="glossary.html#cbt">CBT</a> / <a href="glossary.html#transactional">Transactional analysis</a> / <a href="glossary.html#act">ACT</a> / <a href="glossary.html#mindfulness">Mindfulness</a> / <a href="glossary.html#ontological">Ontological philosophy</a> / <a href="glossary.html#zen">Zen</a> / <a href="glossary.html#stoic">Stoic wisdom</a> / <a href="glossary.html#taoism">Taoism</a> / <a href="glossary.html#family">Family systems</a> / <a href="glossary.html#general">General semantics</a> / <a href="glossary.html#schema">Schema therapy</a></p>
-      </section>
-
-
-
-      <div class="awakepaper">
+      <div class="awakepaper scroll-element js-scroll fade-in" style="filter: drop-shadow(5px 5px 10px #282020);">
         <div class="paperContent">
           <h3>Weekly Awakepaper<span style="font-weight: 300 !important; font-size: 90%; vertical-align: top; margin-left: 0.1rem;">&reg;</span></h3>
           <p class="grad">Learn therapeutic wisdom, optimise emotional intelligence and fulfil your full potential!</p>
@@ -321,35 +328,19 @@
                 <input type="text" id="email" name="email" placeholder="you@yourdomain.com" class="field-dark" />
             </li>
             <li>
-              <button class="button button--flame-border-dark">Get paper</button>
-          </li>    
-            
-
+                <button class="button button--flame-border-dark-form">Get paper</button>
+            </li>
             </ul>
-            
           </form>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
+      </div><!--end .awakepaper -->
 
 
       <ul class="footernav">
-          <li><a href="#0" target="_blank">About</a></li>
-          <li><a href="#0" target="_blank">Blog</a></li>
-          <li><a href="#0" target="_blank">Content</a></li>
-          <li><a href="#0" target="_blank">Guides</a></li>
+        <li><a href="https://awakespace.co/about" target="_blank">About</a></li>
+        <li><a href="https://awakespace.co/blog" target="_blank">Blog</a></li>
+        <li><a href="#0" target="_blank">Teams</a></li>
+        <li><a href="#0" target="_blank">Blah</a></li>
       </ul>
 
       <div class="socials">
@@ -364,12 +355,12 @@
           </a>
         </span>
       </div>
-      <span class="footLeft">Copyright &copy; 2022 Awake. <!--All rights reserved.--></span>
+      <span class="footLeft">Copyright &copy; 2022</span>
       <span class="footRight"><a href="#0" target="_blank">Terms</a> | <a href="http://jamesgarnham.com" target="_blank">Made by JG</a></span></div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
-              const swiper = new Swiper('.swiper', {
+        const swiper = new Swiper('.swiper', {
         // Default parameters
         slidesPerView: 'auto',
           spaceBetween: 20,
@@ -406,67 +397,8 @@
         el: '.swiper-scrollbar',
       },
     });
-
-
-
-
-
-          
-        
-
-
-
-
-
-
-
-
-
-/*
-
-
-
-
-var swiper = new Swiper('.news-slider', {
-    effect: 'coverflow',
-    grabCursor: true,
-    loop: true,
-    centeredSlides: true,
-    keyboard: true,
-    spaceBetween: 0,
-    slidesPerView: 'auto',
-    speed: 300,
-    coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 0,
-        modifier: 3,
-        slideShadows: false
-    },
-    breakpoints: {
-        480: {
-            spaceBetween: 0,
-            centeredSlides: true
-        }
-    },
-    simulateTouch: true,
-    navigation: {
-        nextEl: '.news-slider-next',
-        prevEl: '.news-slider-prev'
-    },
-    pagination: {
-        el: '.news-slider__pagination',
-        clickable: true
-    },
-*/
-
-
-
-
     </script>
-    <script src="js/main.js"></script>
-
-     
+    <script src="js/main.js"></script>    
     <svg class="hidden">
       <defs>
         <symbol id="share-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></symbol>

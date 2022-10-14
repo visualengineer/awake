@@ -26,6 +26,43 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c67d62">
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <style>
+      @font-face {
+        font-family: 'euclid_circular_b';
+        font-weight: 300;
+        font-display: swap;
+        font-style: italic;
+        src:  url('fonts/euclidcircularb-light-webfont.woff2') format('woff2')
+      }
+      @font-face {
+        font-family: 'euclid_circular_b';
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+        src:  url('fonts/euclidcircularb-regular-webfont.woff2') format('woff2')
+      }
+      @font-face {
+        font-family: 'euclid_circular_b';
+        font-weight: 500;
+        font-display: swap;
+        font-style: normal;
+        src:  url('fonts/euclidcircularb-medium-webfont.woff2') format('woff2')
+      }
+       @font-face {
+        font-family: 'euclid_circular_b';
+        font-weight: 600;
+        font-display: swap;
+        font-style: normal;
+        src:  url('fonts/euclidcircularb-semibold-webfont.woff2') format('woff2')
+      }
+      @font-face {
+        font-family: 'euclid_circular_b';
+        font-weight: 700;
+        font-display: swap;
+        font-style: normal;
+        src:  url('fonts/euclidcircularb-bold-webfont.woff2') format('woff2')
+      }
+  </style>
   </head>
 
   <body>
@@ -86,29 +123,29 @@
 
 
 
-
+        <div class="awakepaper" style="margin-bottom: 4REM;">
+          <div class="paperContent">
+            <h3>Way of the Hero ebook<!--<span style="font-weight: 300 !important; font-size: 90%; vertical-align: top; margin-left: 0.1rem;">&reg;</span>--></h3>
+            <p class="grad">Learn the twelve secrets to facing adversity <br class="variable">& managing your emotions.</p>
+          </div>
+          <div class="paperFields">
+            <form action="/action_page.php" method="get" target="_blank" class="contact" id="contactForm">
+              <ul>
+                <li>
+                  <!--<label for="email" class="text-field error-text">Email &#42; - Please check this address</label>-->
+                  <label for="email" class="text-field -dark">Your email address</label>
+                  <input type="text" id="email" name="email" placeholder="you@yourdomain.com" class="field-dark" />
+              </li>
+              <li>
+                  <button class="button button--flame-border-dark-form">Get the ebook</button>
+              </li>
+              </ul>
+            </form>
+          </div>
+        </div><!--end .awakepaper -->
         <!--///////////////////////////-->
         <section style="background: white; margin-top: 0 !important; padding-top: 0 !important;">
-          <div class="awakepaper">
-            <div class="paperContent">
-              <h3>Weekly Awakepaper<span style="font-weight: 300 !important; font-size: 90%; vertical-align: top; margin-left: 0.1rem;">&reg;</span></h3>
-              <p class="grad">Learn the twelve secrets to facing adversity & managing your emotions.</p>
-            </div>
-            <div class="paperFields">
-              <form action="/action_page.php" method="get" target="_blank" class="contact" id="contactForm">
-                <ul>
-                  <li>
-                    <!--<label for="email" class="text-field error-text">Email &#42; - Please check this address</label>-->
-                    <label for="email" class="text-field -dark">Your email address</label>
-                    <input type="text" id="email" name="email" placeholder="you@yourdomain.com" class="field-dark" />
-                </li>
-                <li>
-                    <button class="button button--flame-border-dark-form">Get paper</button>
-                </li>
-                </ul>
-              </form>
-            </div>
-          </div><!--end .awakepaper -->
+         
         </section>
         <!--///////////////////////////-->
         <section class="awake-intro">
@@ -116,12 +153,12 @@
           <h2 class="scroll-element js-scroll fade-in">We take the best of therapeutic wisdom, ancient philosophy and coaching theory and package them into innovative self-development journeys.</h2>
           <hr class="js-scroll fade-in">
           <h2 class="scroll-element js-scroll fade-in">Each bespoke Awake journey includes masterclass videos, guided meditations, workbook assignments and live webinars hosted by qualified experts.</h2>
-          <figure class="fig1 scroll-element js-scroll slide-left">
-            <img src="https://via.placeholder.com/300" alt="Elephant at sunset">
+          <figure class="fig1 scroll-element js-scroll slide-right">
+            <img src="img/placeholder1.png" alt="Elephant at sunset">
             <figcaption>An Awake Masterclass video</figcaption>
           </figure>
-          <figure class="fig2 scroll-element js-scroll slide-right">
-            <img src="https://via.placeholder.com/300" alt="Elephant at sunset">
+          <figure class="fig2 scroll-element js-scroll slide-left">
+            <img src="img/placeholder2.png" alt="Elephant at sunset">
             <figcaption>An Awake workbook spread</figcaption>
           </figure>
           <div class="signoff">
@@ -137,12 +174,12 @@
 
         <!--///////////////////////////-->
         <section class="journey-steps" id="journey-steps">
-            <h3 class="js-scroll slide-left">Awake journey - the steps</h3>
+            <h2 class="js-scroll slide-left">Awake journey - the steps</h2>
             <h3 class="glossary-grad js-scroll fade-in">We have created a unique four-part learning process. This journey of contemplation and discovery takes you from knowing to being, making the wisdom central of your everyday reality.</h3>
             <!--<div class="container"></div>-->
             <div class="accordion scroll-element js-scroll fade-in-bottom">
               <dl>
-                <dt><a class="accordionTitle dtvideo" href="#"><img src="img/icon-video-2.svg" class="journeyIcon" alt="">Masterclass video</a></dt>
+                <dt><a href="#" class="accordionTitle dtvideo"><img src="img/icon-video-2.svg" class="journeyIcon" alt="">Masterclass video</a></dt>
                 <dd class="accordionItem accordionItemCollapsed ddvideo">
                   <p>Begin your journey by learning the source code, the underlying wisdom based on well-established therapies & philosophies. Our masterclass videos are delivered by expert therapists and coaches. </p>
                 </dd>
@@ -246,7 +283,7 @@
 
       <div class="awakepaper scroll-element js-scroll fade-in" style="filter: drop-shadow(5px 5px 10px #282020);">
         <div class="paperContent">
-          <h3>Weekly Awakepaper<span style="font-weight: 300 !important; font-size: 90%; vertical-align: top; margin-left: 0.1rem;">&reg;</span></h3>
+          <h3>Weekly Awakepaper<span style="font-weight: 300 !important; font-size: 60%; vertical-align: top; margin-left: 0.1rem">&reg;</span></h3>
           <p class="grad">Learn therapeutic wisdom, optimise emotional intelligence and fulfil your full potential!</p>
         </div>
         <div class="paperFields">
@@ -267,10 +304,10 @@
 
 
       <ul class="footernav">
-          <li><a href="#0" target="_blank">About</a></li>
-          <li><a href="#0" target="_blank">Blog</a></li>
-          <li><a href="#0" target="_blank">Content</a></li>
-          <li><a href="#0" target="_blank">Guides</a></li>
+          <li><a href="https://awakespace.co/about" target="_blank">About</a></li>
+          <li><a href="https://awakespace.co/blog" target="_blank">Blog</a></li>
+          <li><a href="#0" target="_blank">Teams</a></li>
+          <li><a href="#0" target="_blank">Blah</a></li>
       </ul>
 
       <div class="socials">
@@ -324,9 +361,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
-              const swiper = new Swiper('.swiper', {
+        const swiper = new Swiper('.swiper', {
         // Default parameters
-        slidesPerView: 'auto',
+          slidesPerView: 'auto',
           spaceBetween: 20,
           centeredSlides: true,
           //centeredSlidesBounds: true,
@@ -401,6 +438,6 @@ var swiper = new Swiper('.news-slider', {
 
 
     </script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" async></script>
   </body>
 </html>

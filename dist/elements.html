@@ -16,8 +16,318 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c67d62">
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <style>
+      @keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #fdefe2;
+    overflow: hidden;
+}
+
+.background span {
+    width: 49vmin;
+    height: 49vmin;
+    border-radius: 49vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 35;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+    color: #ffc2c2;
+    top: 96%;
+    left: 36%;
+    animation-duration: 88s;
+    animation-delay: -107s;
+    transform-origin: -5vw -15vh;
+    box-shadow: -98vmin 0 12.690516129196292vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: #ffc2c2;
+    top: 52%;
+    left: 80%;
+    animation-duration: 141s;
+    animation-delay: -29s;
+    transform-origin: 18vw -1vh;
+    box-shadow: 98vmin 0 12.40104991611124vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: #ffcfd4;
+    top: 29%;
+    left: 31%;
+    animation-duration: 14s;
+    animation-delay: -16s;
+    transform-origin: -10vw -18vh;
+    box-shadow: 98vmin 0 13.147572822085454vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: #ffcfd4;
+    top: 93%;
+    left: 66%;
+    animation-duration: 131s;
+    animation-delay: -7s;
+    transform-origin: 1vw -20vh;
+    box-shadow: -98vmin 0 13.054350417946246vmin currentColor;
+}
+.background span:nth-child(4) {
+    color: #ffcfd4;
+    top: 42%;
+    left: 19%;
+    animation-duration: 10s;
+    animation-delay: -53s;
+    transform-origin: 13vw -4vh;
+    box-shadow: -98vmin 0 12.463434411607173vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: #ffc2c2;
+    top: 13%;
+    left: 14%;
+    animation-duration: 57s;
+    animation-delay: -21s;
+    transform-origin: -3vw 12vh;
+    box-shadow: -98vmin 0 12.994461824110562vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: #ffcfd4;
+    top: 5%;
+    left: 8%;
+    animation-duration: 60s;
+    animation-delay: -64s;
+    transform-origin: 4vw 16vh;
+    box-shadow: -98vmin 0 12.425060443937696vmin currentColor;
+}
+.background span:nth-child(7) {
+    color: #ffcfd4;
+    top: 51%;
+    left: 79%;
+    animation-duration: 105s;
+    animation-delay: -64s;
+    transform-origin: 8vw -16vh;
+    box-shadow: -98vmin 0 12.539091678284453vmin currentColor;
+}
+.background span:nth-child(8) {
+    color: #ffc2c2;
+    top: 82%;
+    left: 72%;
+    animation-duration: 73s;
+    animation-delay: -102s;
+    transform-origin: -21vw 4vh;
+    box-shadow: -98vmin 0 12.876148954089498vmin currentColor;
+}
+.background span:nth-child(9) {
+    color: #ffcfd4;
+    top: 84%;
+    left: 26%;
+    animation-duration: 141s;
+    animation-delay: -125s;
+    transform-origin: 25vw 23vh;
+    box-shadow: 98vmin 0 12.813770368594753vmin currentColor;
+}
+.background span:nth-child(10) {
+    color: #ffcfd4;
+    top: 44%;
+    left: 60%;
+    animation-duration: 58s;
+    animation-delay: -139s;
+    transform-origin: -3vw -21vh;
+    box-shadow: -98vmin 0 13.133962823551386vmin currentColor;
+}
+.background span:nth-child(11) {
+    color: #ffc2c2;
+    top: 31%;
+    left: 77%;
+    animation-duration: 135s;
+    animation-delay: -89s;
+    transform-origin: 2vw 14vh;
+    box-shadow: 98vmin 0 12.612943061557862vmin currentColor;
+}
+.background span:nth-child(12) {
+    color: #ffcfd4;
+    top: 56%;
+    left: 83%;
+    animation-duration: 89s;
+    animation-delay: -38s;
+    transform-origin: 13vw -18vh;
+    box-shadow: -98vmin 0 12.432250702110084vmin currentColor;
+}
+.background span:nth-child(13) {
+    color: #ffe7cd;
+    top: 15%;
+    left: 35%;
+    animation-duration: 21s;
+    animation-delay: -67s;
+    transform-origin: 18vw -21vh;
+    box-shadow: -98vmin 0 12.47130024234929vmin currentColor;
+}
+.background span:nth-child(14) {
+    color: #ffc2c2;
+    top: 24%;
+    left: 56%;
+    animation-duration: 76s;
+    animation-delay: -63s;
+    transform-origin: -8vw 12vh;
+    box-shadow: 98vmin 0 12.31004189095704vmin currentColor;
+}
+.background span:nth-child(15) {
+    color: #ffc2c2;
+    top: 35%;
+    left: 10%;
+    animation-duration: 22s;
+    animation-delay: -29s;
+    transform-origin: -13vw 21vh;
+    box-shadow: -98vmin 0 12.985473208062833vmin currentColor;
+}
+.background span:nth-child(16) {
+    color: #ffc2c2;
+    top: 74%;
+    left: 47%;
+    animation-duration: 49s;
+    animation-delay: -139s;
+    transform-origin: 2vw 25vh;
+    box-shadow: -98vmin 0 12.366469072898765vmin currentColor;
+}
+.background span:nth-child(17) {
+    color: #ffc2c2;
+    top: 41%;
+    left: 53%;
+    animation-duration: 42s;
+    animation-delay: -32s;
+    transform-origin: -3vw 24vh;
+    box-shadow: 98vmin 0 13.066753422379536vmin currentColor;
+}
+.background span:nth-child(18) {
+    color: #ffcfd4;
+    top: 12%;
+    left: 40%;
+    animation-duration: 20s;
+    animation-delay: -131s;
+    transform-origin: -13vw -23vh;
+    box-shadow: 98vmin 0 13.208725186548872vmin currentColor;
+}
+.background span:nth-child(19) {
+    color: #ffcfd4;
+    top: 17%;
+    left: 47%;
+    animation-duration: 84s;
+    animation-delay: -36s;
+    transform-origin: 25vw 17vh;
+    box-shadow: 98vmin 0 13.133348678752295vmin currentColor;
+}
+.background span:nth-child(20) {
+    color: #ffcfd4;
+    top: 62%;
+    left: 52%;
+    animation-duration: 91s;
+    animation-delay: -20s;
+    transform-origin: 17vw 2vh;
+    box-shadow: -98vmin 0 13.22221477667772vmin currentColor;
+}
+.background span:nth-child(21) {
+    color: #ffc2c2;
+    top: 57%;
+    left: 74%;
+    animation-duration: 57s;
+    animation-delay: -16s;
+    transform-origin: 2vw -7vh;
+    box-shadow: -98vmin 0 12.735584816357324vmin currentColor;
+}
+.background span:nth-child(22) {
+    color: #ffcfd4;
+    top: 98%;
+    left: 6%;
+    animation-duration: 116s;
+    animation-delay: -60s;
+    transform-origin: 16vw 0vh;
+    box-shadow: -98vmin 0 12.567444786811041vmin currentColor;
+}
+.background span:nth-child(23) {
+    color: #ffe7cd;
+    top: 70%;
+    left: 67%;
+    animation-duration: 129s;
+    animation-delay: -22s;
+    transform-origin: -16vw -9vh;
+    box-shadow: 98vmin 0 12.849516617138423vmin currentColor;
+}
+.background span:nth-child(24) {
+    color: #ffcfd4;
+    top: 76%;
+    left: 69%;
+    animation-duration: 150s;
+    animation-delay: -122s;
+    transform-origin: -21vw -11vh;
+    box-shadow: 98vmin 0 12.72331108834512vmin currentColor;
+}
+.background span:nth-child(25) {
+    color: #ffc2c2;
+    top: 22%;
+    left: 44%;
+    animation-duration: 13s;
+    animation-delay: -79s;
+    transform-origin: 2vw 10vh;
+    box-shadow: 98vmin 0 12.444618952478143vmin currentColor;
+}
+.background span:nth-child(26) {
+    color: #ffe7cd;
+    top: 3%;
+    left: 9%;
+    animation-duration: 124s;
+    animation-delay: -20s;
+    transform-origin: -21vw 6vh;
+    box-shadow: -98vmin 0 13.135389735299215vmin currentColor;
+}
+
+    </style>
   </head>
 <body>
+
+
+
+  <div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+
+
     <header>
         <nav class="primary" aria-label="primary"><a href="index.html"><img src="img/awake-logo.svg" class="logo" /></a><ul><li>Journeys</li><li>Teams</li><li><a href="javascript:;" class="button button--flame-border-light">Login</a></li></ul></nav>
     </header>
@@ -336,7 +646,26 @@
 
 
 
-
+        <div class="awakepaper">
+          <div class="paperContent">
+            <h3>Weekly Awakepaper<span style="font-weight: 300 !important; font-size: 90%; vertical-align: top; margin-left: 0.1rem;">&reg;</span></h3>
+            <p class="grad">Learn the twelve secrets to facing adversity & managing your emotions.</p>
+          </div>
+          <div class="paperFields">
+            <form action="/action_page.php" method="get" target="_blank" class="contact" id="contactForm">
+              <ul>
+                <li>
+                  <!--<label for="email" class="text-field error-text">Email &#42; - Please check this address</label>-->
+                  <label for="email" class="text-field -dark">Your email address</label>
+                  <input type="text" id="email" name="email" placeholder="you@yourdomain.com" class="field-dark" />
+              </li>
+              <li>
+                  <button class="button button--flame-border-dark-form">Get paper</button>
+              </li>
+              </ul>
+            </form>
+          </div>
+        </div><!--end .awakepaper -->
 
 
 
@@ -390,8 +719,10 @@
 -->
 
 
+
+
     </div><!--.wrapper -->
     <footer>footer</footer>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" async></script>
   </body>
 </html>
