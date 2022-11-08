@@ -631,6 +631,7 @@ function scrollFunction() {
 }
 */
 
+
 //document.getElementById("navbar").style.top = "0";
 
 let scroll_position = 0;
@@ -640,7 +641,7 @@ window.addEventListener('scroll', function(e){
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     scroll_direction = (document.body.getBoundingClientRect()).top > scroll_position ? 'up' : 'down';
     scroll_position = (document.body.getBoundingClientRect()).top;
-    console.log(scroll_direction);
+    //console.log(scroll_direction);
 
   if (scroll_direction == 'up') {
     //document.getElementById("navbar").style.top = "0";
